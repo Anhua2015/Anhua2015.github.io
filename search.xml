@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>maven基本配置---本地仓库+阿里云远程库</title>
+      <link href="/2019/11/27/mavenSettings/"/>
+      <url>/2019/11/27/mavenSettings/</url>
+      
+        <content type="html"><![CDATA[<h3 id="配置本地仓库"><a href="#配置本地仓库" class="headerlink" title="配置本地仓库"></a>配置本地仓库</h3><p>首先在maven主目录下创建一个文件夹用来做maven的本地仓库。<br>进入主目录下的/conf目录，编辑settings.xml文件，找到如图所示的位置：<br><img src="/images/maven/maven%E9%85%8D%E7%BD%AE.png" alt="图片 1"><br>在此注释之下加入下面的内容：<br><localrepository>D:/studySoftware/apache-maven-3.6.3/pro</localrepository>，其中/pro为开始时所创建的文件夹。如下图所示：<br><img src="/images/maven/maven%E9%85%8D%E7%BD%AE2.png" alt="图片 2"></p><h3 id="配置阿里云远程库"><a href="#配置阿里云远程库" class="headerlink" title="配置阿里云远程库"></a>配置阿里云远程库</h3><p>由于访问国外的官方库可能速度会比较慢，在这里我们可以设置成国内的一些远程仓库，此处选用阿里云maven库。同样实在settings.xml配置文件中操作，首先找到<mirrors>标签，在此标签内添加如下内容：</mirrors></p><pre><code>&lt;mirror&gt;              &lt;id&gt;nexus-aliyun&lt;/id&gt;            &lt;name&gt;nexus-aliyun&lt;/name&gt;          &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;            &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;            &lt;/mirror&gt;   </code></pre><p>如下图所示：<br><img src="/images/maven/maven%E9%85%8D%E7%BD%AE3.png" alt="图片 3"></p><p>ok，最后保存一下。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> maven </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> maven本地仓库配置 </tag>
+            
+            <tag> maven添加阿里云远程仓库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo:Hello World</title>
       <link href="/2019/09/01/hello-world/"/>
       <url>/2019/09/01/hello-world/</url>
