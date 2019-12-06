@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>GitHub高级检索</title>
+      <link href="/2019/12/06/githubSearch/"/>
+      <url>/2019/12/06/githubSearch/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>​    GitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名GitHub。GitHub对广大的开发者来说是个巨大的宝库，在GitHub上我们可以学习众多大佬优秀的思想以及他们所建造的轮子，同时也可以记录和分享自己的技术和经验。想要更好的使用GitHub这个宝库，那么学会GitHub的高级检索功能就显得至关重要。</p><p>GitHub官方文档： <a href="https://help.github.com/categories/search/" target="_blank" rel="noopener">github帮助页面</a></p><h3 id="官方文档摘抄"><a href="#官方文档摘抄" class="headerlink" title="官方文档摘抄"></a>官方文档摘抄</h3><p><strong>About searching on GitHub</strong><br>Use our powerful search tools to find what you’re looking for among the many repositories, users, and lines of code on GitHub.</p><p>You can search globally across all of GitHub, or scope your search to a particular repository or organization.</p><h3 id="Types-of-searches-on-GitHub"><a href="#Types-of-searches-on-GitHub" class="headerlink" title="Types of searches on GitHub"></a>Types of searches on GitHub</h3><p>You can search the following types of information across all public GitHub repositories, and all private GitHub repositories you have access to:</p><ol><li>Repositories</li></ol><p><strong>Searching for repositories</strong><br>You can search for repositories on GitHub and narrow the results using these repository search qualifiers in any combination.</p><table><thead><tr><th>Qualifier</th><th>Example</th></tr></thead><tbody><tr><td><u>in:name</u></td><td>jquery in:name matches repositories with “jquery” in their name.</td></tr><tr><td><u>in:description</u></td><td>jquery in:name,description matches repositories with “jquery” in their name or description.</td></tr><tr><td><u>in:readme</u></td><td>jquery in:readme matches repositories mentioning “jquery” in their README file.</td></tr><tr><td>repo:owner/name</td><td>repo:octocat/hello-world matches a specific repository name.</td></tr><tr><td>user:USERNAME</td><td>user:defunkt forks:&gt;100 matches repositories from @defunkt that have more than 100 forks.</td></tr><tr><td>org:ORGNAME</td><td>org:github matches repositories from GitHub.</td></tr><tr><td>size:n</td><td>size:1000 matches repositories that are 1 MB exactly.size:&gt;=30000 matches repositories that are at least 30 MB.size:&lt;50 matches repositories that are smaller than 50 KB.size:50..120 matches repositories that are between 50 KB and 120 KB.</td></tr><tr><td>followers:n</td><td>node followers:&gt;=10000 matches repositories with 10,000 or more followers mentioning the word “node”. styleguide linter followers:1..10 matches repositories with between 1 and 10 followers, mentioning the word “styleguide linter.”</td></tr><tr><td>forks:n</td><td>forks:5 matches repositories with only five forks.forks:&gt;=205 matches repositories with at least 205 forks.forks:&lt;90 matches repositories with fewer than 90 forks.forks:10..20 matches repositories with 10 to 20 forks.</td></tr><tr><td>stars:n</td><td>stars:500 matches repositories with exactly 500 stars.stars:10..20 matches repositories 10 to 20 stars, that are smaller than 1000 KB.stars:&gt;=500 fork:true language:php matches repositories with the at least 500 stars, including forked ones, that are written in PHP.</td></tr><tr><td>created:YYYY-MM-DD</td><td>webos created:&lt;2011-01-01 matches repositories with the word “webos” that were created before 2011.</td></tr><tr><td>pushed:YYYY-MM-DD</td><td>css pushed:&gt;2013-02-01 matches repositories with the word “css” that were pushed to after January 2013.case pushed:&gt;=2013-03-06 fork:only matches repositories with the word “case” that were pushed to on or after March 6th, 2013, and that are forks.</td></tr><tr><td>language:LANGUAGE</td><td>rails language:javascript matches repositories with the word “rails” that are written in JavaScript.</td></tr><tr><td>topic:TOPIC</td><td>topic:jekyll matches repositories that have been classified with the topic “jekyll.”</td></tr><tr><td>topics:n</td><td>topics:5 matches repositories that have five topics.topics:&gt;3 matches repositories that have more than three topics.</td></tr><tr><td>license:LICENSE_KEYWORD</td><td>license:apache-2.0 matches repositories that are licensed under Apache License 2.0.</td></tr><tr><td>is:public</td><td>is:public org:github matches repositories owned by GitHub that are public.</td></tr><tr><td>is:private</td><td>is:private pages matches private repositories you have access to and that contain the word “pages.”</td></tr><tr><td>mirror:true</td><td>mirror:true GNOME matches repositories that are mirrors and contain the word “GNOME.”</td></tr><tr><td>mirror:false</td><td>mirror:false GNOME matches repositories that are not mirrors and contain the word “GNOME.”</td></tr><tr><td>archived:true</td><td>archived:true GNOME matches repositories that are archived and contain the word “GNOME.”</td></tr><tr><td>archived:false</td><td>archived:false GNOME matches repositories that are not archived and contain the word “GNOME.”</td></tr><tr><td>good-first-issues:&gt;n</td><td>good-first-issues:&gt;2 javascript matches repositories with more than two issues labeled good-first-issue and that contain the word “javascript.”</td></tr><tr><td>help-wanted-issues:&gt;n</td><td>help-wanted-issues:&gt;4 react matches repositories with more than four issues labeled help-wanted and that contain the word “React.”</td></tr></tbody></table><p>GitHub上按“shift + /”即可查看支持的快捷键，在项目中按”t”可以快速搜索文件。</p><p>参考资料：</p><p><a href="https://www.jianshu.com/p/7321caea2a08" target="_blank" rel="noopener">GitHub搜索技巧</a></p><p><a href="https://link.jianshu.com/?t=https://github.com/trending" target="_blank" rel="noopener">GitHub Trending</a>：了解各种不同开发语言的每天/周/月的最热门的 Repositories 和 Developers。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> GitHub </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub搜索 </tag>
+            
+            <tag> GitHub高级检索 </tag>
+            
+            <tag> GitHub advanced search </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>UML类图详解</title>
       <link href="/2019/11/28/UML%E7%B1%BB%E5%9B%BE/"/>
       <url>/2019/11/28/UML%E7%B1%BB%E5%9B%BE/</url>
