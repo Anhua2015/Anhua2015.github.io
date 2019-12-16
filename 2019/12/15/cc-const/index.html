@@ -5,7 +5,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="c/c++ const关键字, java、服务器、消息中间件、C++">
-    <meta name="description" content="C/C++语言中const关键字  在C语言和C++中经常要用到const关键字，最简单的用法是使用它定义常量，如果一个变量被const修饰，那么它的值就不能再被改变。这是const关键字最根本的功能。既然用它定义的变量不可变，那么他与#d">
+    <meta name="description" content="C/C++ const关键字  在C语言和C++中经常要用到const关键字，最简单的用法是使用它定义常量，如果一个变量被const修饰，那么它的值就不能再被改变。这是const关键字最根本的功能。既然用它定义的变量不可变，那么他与#def">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -432,7 +432,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="C-C-语言中const关键字"><a href="#C-C-语言中const关键字" class="headerlink" title="C/C++语言中const关键字"></a>C/C++语言中const关键字</h2><p>  在C语言和C++中经常要用到const关键字，最简单的用法是使用它定义常量，如果一个变量被const修饰，那么它的值就不能再被改变。这是const关键字最根本的功能。既然用它定义的变量不可变，那么他与#define有什么区别呢？</p>
+                <h2 id="C-C-const关键字"><a href="#C-C-const关键字" class="headerlink" title="C/C++ const关键字"></a>C/C++ const关键字</h2><p>  在C语言和C++中经常要用到const关键字，最简单的用法是使用它定义常量，如果一个变量被const修饰，那么它的值就不能再被改变。这是const关键字最根本的功能。既然用它定义的变量不可变，那么他与#define有什么区别呢？</p>
 <ol>
 <li>const关键字定义的变量在堆栈中分配了空间，const修饰的常量是一个Run-Time的概念，变量在程序中确确实实的存在，可以被调用、传递。</li>
 <li>#define只是在编译时只是对值简单的替换，不能进行类型检查，它是Compile-Time概念，他的生命周期止于编译器。</li>
@@ -705,29 +705,37 @@ const double *const pi_ptr = &amp;pi;</code></pre><p>本例中，既不能修改
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/15/cc-const/">
+                <a href="/2019/12/16/ccpp-extern/">
                     <div class="card-image">
                         
-                        <img src="/images/c++/const.jpg" class="responsive-img" alt="c/c++ const关键字">
+                        <img src="/images/c++/extern.png" class="responsive-img" alt="C/C++ extern关键字">
                         
-                        <span class="card-title">c/c++ const关键字</span>
+                        <span class="card-title">C/C++ extern关键字</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C/C++语言中const关键字  在C语言和C++中经常要用到const关键字，最简单的用法是使用它定义常量，如果一个变量被const修饰，那么它的值就不能再被改变。这是const关键字最根本的功能。既然用它定义的变量不可变，那么他与#d
+                            C/C++ extern关键字本篇文章主要围绕一下几个问题对extern关键字进行说明。
+
+声明和定义
+变量和函数的声明
+extern和static
+extern关键字与头文件的联系
+extern “C”
+extern和const
+
+声明和
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-15
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -740,12 +748,11 @@ const double *const pi_ptr = &amp;pi;</code></pre><p>本例中，既不能修改
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/c-c-const关键字/" target="_blank">
-                        <span class="chip bg-color">c/c++ const关键字</span>
+                    <a href="/tags/c-c-extern关键字/" target="_blank">
+                        <span class="chip bg-color">c/c++ extern关键字</span>
                     </a>
                     
                 </div>
@@ -959,7 +966,7 @@ const double *const pi_ptr = &amp;pi;</code></pre><p>本例中，既不能修改
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.6k</span>&nbsp;字
+                class="white-color">6.9k</span>&nbsp;字
             
             
             
