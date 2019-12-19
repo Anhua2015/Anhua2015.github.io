@@ -471,16 +471,13 @@ int compare(const T &amp;v1, const T &amp;v2)
 </ol>
 <pre><code>//ok:inline specifier follows template parameter list
 template &lt;typename T&gt; inline T min(const T&amp;, const T&amp;);
-
 //error: incorrect placement of inline specifier
 inline template &lt;typename T&gt; T min(const T&amp;, const T&amp;);</code></pre><ol start="4">
 <li>成员函数模板<br>也可以为类成员函数定义模板，如下所示：</li>
 </ol>
 <pre><code>#include&lt;iostream&gt;
 #include&lt;string&gt;
-
 using namespace std;
-
 class Printer {
 public:
     template&lt;typename T&gt;
@@ -488,13 +485,10 @@ public:
         cout &lt;&lt; t &lt;&lt;endl;
     }
 };
-
 int main(){
-
     Printer p;
     p.print("abc");
     p.print(56);
-
     return 0;
 }</code></pre><h2 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h2><p>就像定义模板函数，我们也可以定义类模板，类模板一般形式如下所示：</p>
 <pre><code>template &lt;class type&gt; class class-name {
