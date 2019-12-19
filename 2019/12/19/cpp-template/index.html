@@ -4,8 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="GitHub高级检索, java、服务器、消息中间件、C++">
-    <meta name="description" content="简述​    GitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名GitHub。GitHub对广大的开发者来说是个巨大的宝库，在GitHub上我们可以学习众多大佬优秀的思想以及他们所建造的">
+    <meta name="keywords" content="C++模板, java、服务器、消息中间件、C++">
+    <meta name="description" content="C++模板模板是泛型编程的基础，泛型编程，即以一种独立于任何特定类型的方式编码。模板是创建泛型类或函数的蓝图或公式。C++中使用template关键字来定义模板。  
+在理解泛型之前，首先我们需要了解什么时泛型编程，简单点来说，因为C++是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>GitHub高级检索 | AHSpace</title>
+    <title>C++模板 | AHSpace</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +262,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/github/github封面.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/c++/cpp_template.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        GitHub高级检索
+                        C++模板
                     </div>
                 </div>
             </div>
@@ -378,16 +379,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/GitHub搜索/" target="_blank">
-                                <span class="chip bg-color">GitHub搜索</span>
+                            <a href="/tags/C-模板/" target="_blank">
+                                <span class="chip bg-color">C++模板</span>
                             </a>
                         
-                            <a href="/tags/GitHub高级检索/" target="_blank">
-                                <span class="chip bg-color">GitHub高级检索</span>
-                            </a>
-                        
-                            <a href="/tags/GitHub-advanced-search/" target="_blank">
-                                <span class="chip bg-color">GitHub advanced search</span>
+                            <a href="/tags/C-template关键字/" target="_blank">
+                                <span class="chip bg-color">C++ template关键字</span>
                             </a>
                         
                     </div>
@@ -398,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/GitHub/" class="post-category" target="_blank">
-                                GitHub
+                            <a href="/categories/c-c/" class="post-category" target="_blank">
+                                c/c++
                             </a>
                         
                     </div>
@@ -410,21 +407,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-06
+                    2019-12-19
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        853
+                        2.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        10 分
                     </div>
                     
                 
@@ -440,119 +437,102 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>​    GitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名GitHub。GitHub对广大的开发者来说是个巨大的宝库，在GitHub上我们可以学习众多大佬优秀的思想以及他们所建造的轮子，同时也可以记录和分享自己的技术和经验。想要更好的使用GitHub这个宝库，那么学会GitHub的高级检索功能就显得至关重要。</p>
-<p>GitHub官方文档： <a href="https://help.github.com/categories/search/" target="_blank" rel="noopener">github帮助页面</a></p>
-<h3 id="官方文档摘抄"><a href="#官方文档摘抄" class="headerlink" title="官方文档摘抄"></a>官方文档摘抄</h3><p><strong>About searching on GitHub</strong><br>Use our powerful search tools to find what you’re looking for among the many repositories, users, and lines of code on GitHub.</p>
-<h4 id="Repositories"><a href="#Repositories" class="headerlink" title="Repositories"></a>Repositories</h4><p><strong>Searching for repositories</strong><br>You can search for repositories on GitHub and narrow the results using these repository search qualifiers in any combination.</p>
-<table>
-<thead>
-<tr>
-<th>Qualifier</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><u>in:name</u></td>
-<td>jquery in:name matches repositories with “jquery” in their name.</td>
-</tr>
-<tr>
-<td><u>in:description</u></td>
-<td>jquery in:name,description matches repositories with “jquery” in their name or description.</td>
-</tr>
-<tr>
-<td><u>in:readme</u></td>
-<td>jquery in:readme matches repositories mentioning “jquery” in their README file.</td>
-</tr>
-<tr>
-<td>repo:owner/name</td>
-<td>repo:octocat/hello-world matches a specific repository name.</td>
-</tr>
-<tr>
-<td>user:USERNAME</td>
-<td>user:defunkt forks:&gt;100 matches repositories from @defunkt that have more than 100 forks.</td>
-</tr>
-<tr>
-<td>org:ORGNAME</td>
-<td>org:github matches repositories from GitHub.</td>
-</tr>
-<tr>
-<td>size:n</td>
-<td>size:1000 matches repositories that are 1 MB exactly.size:&gt;=30000 matches repositories that are at least 30 MB.size:&lt;50 matches repositories that are smaller than 50 KB.size:50..120 matches repositories that are between 50 KB and 120 KB.</td>
-</tr>
-<tr>
-<td>followers:n</td>
-<td>node followers:&gt;=10000 matches repositories with 10,000 or more followers mentioning the word “node”. styleguide linter followers:1..10 matches repositories with between 1 and 10 followers, mentioning the word “styleguide linter.”</td>
-</tr>
-<tr>
-<td>forks:n</td>
-<td>forks:5 matches repositories with only five forks.forks:&gt;=205 matches repositories with at least 205 forks.forks:&lt;90 matches repositories with fewer than 90 forks.forks:10..20 matches repositories with 10 to 20 forks.</td>
-</tr>
-<tr>
-<td>stars:n</td>
-<td>stars:500 matches repositories with exactly 500 stars.stars:10..20 matches repositories 10 to 20 stars, that are smaller than 1000 KB.stars:&gt;=500 fork:true language:php matches repositories with the at least 500 stars, including forked ones, that are written in PHP.</td>
-</tr>
-<tr>
-<td>created:YYYY-MM-DD</td>
-<td>webos created:&lt;2011-01-01 matches repositories with the word “webos” that were created before 2011.</td>
-</tr>
-<tr>
-<td>pushed:YYYY-MM-DD</td>
-<td>css pushed:&gt;2013-02-01 matches repositories with the word “css” that were pushed to after January 2013.case pushed:&gt;=2013-03-06 fork:only matches repositories with the word “case” that were pushed to on or after March 6th, 2013, and that are forks.</td>
-</tr>
-<tr>
-<td>language:LANGUAGE</td>
-<td>rails language:javascript matches repositories with the word “rails” that are written in JavaScript.</td>
-</tr>
-<tr>
-<td>topic:TOPIC</td>
-<td>topic:jekyll matches repositories that have been classified with the topic “jekyll.”</td>
-</tr>
-<tr>
-<td>topics:n</td>
-<td>topics:5 matches repositories that have five topics.topics:&gt;3 matches repositories that have more than three topics.</td>
-</tr>
-<tr>
-<td>license:LICENSE_KEYWORD</td>
-<td>license:apache-2.0 matches repositories that are licensed under Apache License 2.0.</td>
-</tr>
-<tr>
-<td>is:public</td>
-<td>is:public org:github matches repositories owned by GitHub that are public.</td>
-</tr>
-<tr>
-<td>is:private</td>
-<td>is:private pages matches private repositories you have access to and that contain the word “pages.”</td>
-</tr>
-<tr>
-<td>mirror:true</td>
-<td>mirror:true GNOME matches repositories that are mirrors and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td>mirror:false</td>
-<td>mirror:false GNOME matches repositories that are not mirrors and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td>archived:true</td>
-<td>archived:true GNOME matches repositories that are archived and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td>archived:false</td>
-<td>archived:false GNOME matches repositories that are not archived and contain the word “GNOME.”</td>
-</tr>
-<tr>
-<td>good-first-issues:&gt;n</td>
-<td>good-first-issues:&gt;2 javascript matches repositories with more than two issues labeled good-first-issue and that contain the word “javascript.”</td>
-</tr>
-<tr>
-<td>help-wanted-issues:&gt;n</td>
-<td>help-wanted-issues:&gt;4 react matches repositories with more than four issues labeled help-wanted and that contain the word “React.”</td>
-</tr>
-</tbody></table>
-<p>GitHub上按“shift + /”即可查看支持的快捷键，在项目中按”t”可以快速搜索文件。</p>
-<p>参考资料：</p>
-<p><a href="https://www.jianshu.com/p/7321caea2a08" target="_blank" rel="noopener">GitHub搜索技巧</a></p>
-<p><a href="https://link.jianshu.com/?t=https://github.com/trending" target="_blank" rel="noopener">GitHub Trending</a>：了解各种不同开发语言的每天/周/月的最热门的 Repositories 和 Developers。</p>
-<script>
+                <h2 id="C-模板"><a href="#C-模板" class="headerlink" title="C++模板"></a>C++模板</h2><p>模板是泛型编程的基础，泛型编程，即以一种独立于任何特定类型的方式编码。模板是创建泛型类或函数的蓝图或公式。C++中使用template关键字来定义模板。  </p>
+<p>在理解泛型之前，首先我们需要了解什么时泛型编程，简单点来说，因为C++是一门强类型语言(静态语言)，所以无法做到像动态语言（python javascript等）那样子，编写一段通用的逻辑，可以把任意类型的变量传进去处理。泛型编程弥补了这个缺点，通过把通用逻辑设计为模板，摆脱了类型的限制，提供了继承机制以外的另一种抽象机制，极大地提升了代码的可重用性。</p>
+<p><strong>模板</strong>：用来定义<strong>函数</strong>和<strong>类</strong>。使用模板可以使用户为类或者函数声明一种一般模式，使得类中的某些数据成员或者成员函数的参数、返回值取得任意类型。  </p>
+<h2 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h2><p>函数模板针对仅参数类型不同的函数，通俗点讲就是，一个函数模板可以处理相同操作逻辑的多种数据类型，具体是什么类型的数据，是在调用函数时传入的参数类型决定的。<br>函数的模板一般形式如下所示：</p>
+<pre><code>// implement strcmp-like generic compare function
+// returns 0 if the values are equal, 1 if v1 is larger, -1 if v1 is smaller
+template &lt;typename T&gt;
+int compare(const T &amp;v1, const T &amp;v2)
+{
+    if (v1 &lt; v2) return -1;
+    if (v2 &lt; v1) return 1;
+    return 0;
+}</code></pre><p>模板定义以template关键字开始，后接模板形参表（template parameter list），模板形参表时用尖括号括住的一个或多个模板形参，形参之间以逗号分隔。</p>
+<ol>
+<li><p>模板形参列表<br> 模板形参表很像函数形参表，函数形参表定义了特定类型的局部变量但并不初始化那些变量，在运行时再提供实参来初始化形参。<br> 同样，模板形参可以是表示类型的<strong>类型形参</strong>，也可以是表示常量表达式的<strong>非类型形参（后面说明）</strong>。类型形参跟在关键字class和typename之后定义，例如，class T是名为T的类型形参，在这里class和typename没有区别。  </p>
+</li>
+<li><p>使用函数模板<br> 使用函数模板时，编译器会推断哪个（或哪些）<strong>模板实参</strong>绑定到模板形参。一旦编译器确定了实际的模板实参，就称它实例化了函数模板的一个实例。实际上，编译器将确定用什么类型代替每个类型形参，以及用什么值代替每个非类型形参。<br>对于以下的调用：</p>
+<pre><code>int main(){
+ //T is int
+ //compiler instantiates int compare(const int&amp;, const int&amp;)
+ cout &lt;&lt; compare(1,0) &lt;&lt; endl;
+
+ //T is string
+ //compiler instantiates int compare(const string &amp;, const string &amp;)
+ string s1 = "hi", s2 = "world";
+ cout &lt;&lt; compare(s1, s2) &lt;&lt; endl;
+ return 0;
+}</code></pre></li>
+<li><p>inline函数模板<br>函数模板可以用与非模板函数一样的方式声明为inline。说明符（inline）放在模板形参表（template &lt; typename T&gt;）之后、返回类型之前，不能放在关键字template之前。看下面的例子：</p>
+<pre><code>//ok:inline specifier follows template parameter list
+template &lt;typename T&gt; inline T min(const T&amp;, const T&amp;);
+</code></pre></li>
+</ol>
+<p>//error: incorrect placement of inline specifier<br>inline template <typename t=""> T min(const T&amp;, const T&amp;);</typename></p>
+<pre><code>
+4. 成员函数模板  
+也可以为类成员函数定义模板，如下所示：</code></pre><p>#include<iostream></iostream></p>
+<p>#include<string></string></p>
+<p>using namespace std;</p>
+<p>class Printer {<br>public:<br>    template<typename t=""><br>    void print(const T&amp; t) {<br>        cout &lt;&lt; t &lt;&lt;endl;<br>    }<br>};</typename></p>
+<p>int main(){</p>
+<pre><code>Printer p;
+p.print("abc");
+p.print(56);
+
+return 0;</code></pre><p>}</p>
+<pre><code>
+## 类模板
+就像定义模板函数，我们也可以定义类模板，类模板一般形式如下所示：</code></pre><p>template <class type=""> class class-name {<br>//类主体<br>}</class></p>
+<p>//使用方法<br>class-name&lt;类型&gt; c;</p>
+<pre><code>
+## 模板形参
+像函数形参一样，程序员为模板形参选择的名字没有本质的含义。也就是说，模板形参惨的名称可以由程序员自己定义，如下所示都是合法的：</code></pre><p>template<typename a=""><br>template<typename b=""></typename></typename></p>
+<pre><code>
+**模板形参作用域**：
+模板形参的名字可以在声明为模板形参之后直到模板声明或定义的末尾处使用。模板形参遵循常规名字屏蔽规则。与全局作用域中声明的对象、函数或类型同名的模板形参会屏蔽全局名字：</code></pre><p>typedef double T;<br>template <class t=""> T calc(const T &amp;a, const T &amp;b){<br>    //tmp has the type of the template parameter T<br>    //not that of the global typedef<br>    T tmp = a;<br>    //..<br>    return tmp;<br>}</class></p>
+<pre><code>
+**使用模板形参名字的限制**：
+用作模板形参的名字不能在模板内部重用：</code></pre><p>template <class t=""> T calc(const T &amp;a, const T &amp;b){<br>    typedef double T; //error:redeclares template parameter T<br>    T tmp = a;<br>    // …<br>    return tmp;<br>}</class></p>
+<pre><code>这个限制还意味着模板形参的名字只能在同一模板形参表中使用一次：</code></pre><p>//error:illegal reuse of template parameter name v<br>template&lt;class v, class v&gt; v calc(const v&amp;, const v&amp;);</p>
+<pre><code>当然，正如可以重用函数形参名字一样，模板形参的名字也能在不同模板中重用：</code></pre><p>template <class t=""> T calc(const T&amp;, const T&amp;);<br>template <class t=""> T compare(const T&amp;, const T&amp;);</class></class></p>
+<pre><code>**模板声明**：
+像其他任意函数或类一样，对于模板可以只声明而不定义。声明必须指出函数或类是一个模板：</code></pre><p>//declares compare but does not define it<br>template <class t=""> int compare(const T&amp;, const T&amp;);</class></p>
+<pre><code>同一模板的声明和定义中，模板形参的名字不必相同：</code></pre><p>//all three uses of calc refer to the same function template<br>//forward declarations of the template<br>template <class t=""> T calc(const T&amp;, const T&amp;);<br>template <class u=""> U calc(const U&amp;, const U&amp;);<br>//actual definition of the template<br>template <class type=""><br>Type calc(const Type&amp; a, const Type&amp; b){…}</class></class></class></p>
+<pre><code>每个模板类型形参前面必须带上关键字class或typename，每个非类型形参前面必须带上类型名字，省略关键字或类型说明符是错误的：</code></pre><p>//error:must precede U by either typename of class<br>template &lt;typename T, U&gt; T calc(const T&amp;, const U&amp;);</p>
+<pre><code>
+## typename与class的区别
+
+类型形参由关键字class或者typename后接说明符构成。在函数模板形参表中，关键字typename和class具有相同的含义，可以互换使用，两个关键字都可以在同一模板形参表中使用。使用关键字typename代替关键字class指定模板类型形参也许更为直观，毕竟，可以使用内置类型（非类类型）作为实际的类型形参，而且，typename更清楚的指明后面的名字是一个类型名。但是，关键字typename是作为标准C++的组成部分加入到C++中，因此旧的程序更有可能只用class关键字。  
+除了定义数据成员或者函数成员外，类还可以定义类型成员。考虑如下函数：</code></pre><p>template &lt;class Parm, class U&gt;<br>Parm fcn(Parm* array, U value){<br>    Parm::size_type *p; //If Parm::size_type is a type, then a declaration<br>    //If Parm::size_type is an object, then multiplication<br>}</p>
+<pre><code>我们知道size_type必定是绑定到Parm的那个类型的成员，但我们不知道size_type是一个类型成员的名字还是一个数据成员的名字，默认情况下，编译器假定这样的名字指定数据成员，而不是类型。
+
+如果希望编译器将size_type当作类型，则必须显式的告诉编译器这样做：</code></pre><p>template &lt;class Parm, class U&gt;<br>Parm fcn(Parm&amp; array, U value){<br>    typename Parm::size_type *p; //ok:declares p to be a pointer<br>}</p>
+<pre><code>通过在成员名前加上关键字typename作为前缀，可以告诉编译器将成员当作类型。
+
+如果拿不准是否需要以typename指明一个名字是一个类型，那么指定它是一个好主意。在类型之前指定typename没有害处，因此，即使typename是不必要的，也没关系。
+
+## 非类型模板参数
+
+模板形参不必都是类型。在调用函数时非类型形参将用值代替，值的类型在模板形参表中指定。例如，下面的函数模板声明了array_init是一个含有类型模板形参和一个非类型模板形参的函数模板。函数本身接受一个形参，该形参是数组的引用：</code></pre><p>//initialize elements of an array to zero<br>template &lt;class T, size_t N&gt; void array_init(T (&amp;parm)[N]){<br>    for(size_t i = 0; i != N; ++i){<br>        parm[i] = 0;<br>    }<br>}</p>
+<pre><code>模板非类型形参是模板定义内部的常量值，在需要常量表达式的时候，可使用非类型形参。  
+当调用array_init时，编译器从数组实参计算非类型形参的值：</code></pre><p>int x[42];<br>double y[10];<br>array_init(x); //instantiates array_init(int(&amp;)[42])<br>array_init(y); //instantiates array_init(double(&amp;)[10])</p>
+<pre><code>对于上面的程序，编译器将实例化array_init的两个版本：第一个实例的形参绑定到int[42],另一个实例中的形参绑定到double[10]。对于模板的非类型形参而言，求值结果相同的表达式将认为是等价的。</code></pre><p>int x[42];<br>const int sz = 40;<br>int y[sz+2];<br>array_init(x); //instantiates array_init(int(&amp;)[42])<br>array_init(y); //equivalent instantiation</p>
+<pre><code>
+接下来我们了解一下类模板的非类型形参：</code></pre><p>template&lt;int hi, int wid&gt;<br>class Screen{<br>public:<br>    //template nontype parameters used to initialize data members<br>    Screen():screen(hi * wid, ‘#’),cursor(0),height(hi),width(wid) {}<br>    //…<br>private:<br>    std::string   screen;<br>    std::string::size_type cursor;<br>    std::string::size_type height,width;<br>}</p>
+<pre><code>这个模板有两个形参，均为非类型形参。当用户定义Screen对象时，必须为每个形参提供常量表达式以供使用。类在默认构造函数中使用这些形参设置默认Screen的尺寸。
+像任意类模板一样，使用Screen类型时必须显式声明形参值：</code></pre><p>Screen&lt;24, 80&gt; hp2621; //screen 24 lines by 80 characters</p>
+<pre><code>
+
+## 参考资料
+
+本文大部分内容摘自：《C++ Primer》  
+[菜鸟教程--C++模板](https://www.runoob.com/cplusplus/cpp-templates.html)  
+[菜鸟教程--C++模板详解](https://www.runoob.com/w3cnote/c-templates-detail.html)  
+[关于编译性语言、解释性语言和脚本语言,动态语言,静态语言的区别](https://blog.csdn.net/lcg910978041/article/details/50696196)  
+[C++ Template 基础篇（一）：函数模板](https://blog.csdn.net/lezardfu/article/details/56852043)  </code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -728,9 +708,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《GitHub高级检索》
+                    《C++模板》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/06/githubSearch/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/19/cpp-template/" property="cc:attributionName"
                rel="cc:attributionURL">
                 anhua
             </a> 采用
@@ -770,28 +750,92 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/15/cc-const/">
+                <a href="/2019/12/19/cpp-template/">
                     <div class="card-image">
                         
-                        <img src="/images/c++/const.jpg" class="responsive-img" alt="c/c++ const关键字">
+                        <img src="/images/c++/cpp_template.png" class="responsive-img" alt="C++模板">
                         
-                        <span class="card-title">c/c++ const关键字</span>
+                        <span class="card-title">C++模板</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C/C++ const关键字  在C语言和C++中经常要用到const关键字，最简单的用法是使用它定义常量，如果一个变量被const修饰，那么它的值就不能再被改变。这是const关键字最根本的功能。既然用它定义的变量不可变，那么他与#def
+                            C++模板模板是泛型编程的基础，泛型编程，即以一种独立于任何特定类型的方式编码。模板是创建泛型类或函数的蓝图或公式。C++中使用template关键字来定义模板。  
+在理解泛型之前，首先我们需要了解什么时泛型编程，简单点来说，因为C++是
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-15
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c-c/" class="post-category" target="_blank">
+                                    c/c++
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-模板/" target="_blank">
+                        <span class="chip bg-color">C++模板</span>
+                    </a>
+                    
+                    <a href="/tags/C-template关键字/" target="_blank">
+                        <span class="chip bg-color">C++ template关键字</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/16/ccpp-extern/">
+                    <div class="card-image">
+                        
+                        <img src="/images/c++/extern.png" class="responsive-img" alt="C/C++ extern关键字">
+                        
+                        <span class="card-title">C/C++ extern关键字</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            C/C++ extern关键字本篇文章主要围绕一下几个问题对extern关键字进行说明。
+
+声明和定义
+变量和函数的声明
+extern和static
+extern关键字与头文件的联系
+extern “C”
+extern和const
+
+声明和
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -807,60 +851,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/c-c-const关键字/" target="_blank">
-                        <span class="chip bg-color">c/c++ const关键字</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/11/28/UML类图/">
-                    <div class="card-image">
-                        
-                        <img src="/images/UML/类图/UML.jpg" class="responsive-img" alt="UML类图详解">
-                        
-                        <span class="card-title">UML类图详解</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            类图的表示方法以及类图中各种关系的详细说明
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/UML/" class="post-category" target="_blank">
-                                    UML
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/UML静态结构/" target="_blank">
-                        <span class="chip bg-color">UML静态结构</span>
-                    </a>
-                    
-                    <a href="/tags/类图/" target="_blank">
-                        <span class="chip bg-color">类图</span>
+                    <a href="/tags/c-c-extern关键字/" target="_blank">
+                        <span class="chip bg-color">c/c++ extern关键字</span>
                     </a>
                     
                 </div>
