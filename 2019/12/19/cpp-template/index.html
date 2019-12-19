@@ -454,85 +454,125 @@ int compare(const T &amp;v1, const T &amp;v2)
 <li><p>模板形参列表<br> 模板形参表很像函数形参表，函数形参表定义了特定类型的局部变量但并不初始化那些变量，在运行时再提供实参来初始化形参。<br> 同样，模板形参可以是表示类型的<strong>类型形参</strong>，也可以是表示常量表达式的<strong>非类型形参（后面说明）</strong>。类型形参跟在关键字class和typename之后定义，例如，class T是名为T的类型形参，在这里class和typename没有区别。  </p>
 </li>
 <li><p>使用函数模板<br> 使用函数模板时，编译器会推断哪个（或哪些）<strong>模板实参</strong>绑定到模板形参。一旦编译器确定了实际的模板实参，就称它实例化了函数模板的一个实例。实际上，编译器将确定用什么类型代替每个类型形参，以及用什么值代替每个非类型形参。<br>对于以下的调用：</p>
+</li>
+</ol>
 <pre><code>int main(){
- //T is int
- //compiler instantiates int compare(const int&amp;, const int&amp;)
- cout &lt;&lt; compare(1,0) &lt;&lt; endl;
+    //T is int
+    //compiler instantiates int compare(const int&amp;, const int&amp;)
+    cout &lt;&lt; compare(1,0) &lt;&lt; endl;
 
- //T is string
- //compiler instantiates int compare(const string &amp;, const string &amp;)
- string s1 = "hi", s2 = "world";
- cout &lt;&lt; compare(s1, s2) &lt;&lt; endl;
- return 0;
-}</code></pre></li>
-<li><p>inline函数模板<br>函数模板可以用与非模板函数一样的方式声明为inline。说明符（inline）放在模板形参表（template &lt; typename T&gt;）之后、返回类型之前，不能放在关键字template之前。看下面的例子：</p>
+    //T is string
+    //compiler instantiates int compare(const string &amp;, const string &amp;)
+    string s1 = "hi", s2 = "world";
+    cout &lt;&lt; compare(s1, s2) &lt;&lt; endl;
+    return 0;
+}</code></pre><ol start="3">
+<li>inline函数模板<br>函数模板可以用与非模板函数一样的方式声明为inline。说明符（inline）放在模板形参表（template &lt; typename T&gt;）之后、返回类型之前，不能放在关键字template之前。看下面的例子：</li>
+</ol>
 <pre><code>//ok:inline specifier follows template parameter list
 template &lt;typename T&gt; inline T min(const T&amp;, const T&amp;);
-</code></pre></li>
+
+//error: incorrect placement of inline specifier
+inline template &lt;typename T&gt; T min(const T&amp;, const T&amp;);</code></pre><ol start="4">
+<li>成员函数模板<br>也可以为类成员函数定义模板，如下所示：</li>
 </ol>
-<p>//error: incorrect placement of inline specifier<br>inline template <typename t=""> T min(const T&amp;, const T&amp;);</typename></p>
-<pre><code>
-4. 成员函数模板  
-也可以为类成员函数定义模板，如下所示：</code></pre><p>#include<iostream></iostream></p>
-<p>#include<string></string></p>
-<p>using namespace std;</p>
-<p>class Printer {<br>public:<br>    template<typename t=""><br>    void print(const T&amp; t) {<br>        cout &lt;&lt; t &lt;&lt;endl;<br>    }<br>};</typename></p>
-<p>int main(){</p>
-<pre><code>Printer p;
-p.print("abc");
-p.print(56);
+<pre><code>#include&lt;iostream&gt;
+#include&lt;string&gt;
 
-return 0;</code></pre><p>}</p>
-<pre><code>
-## 类模板
-就像定义模板函数，我们也可以定义类模板，类模板一般形式如下所示：</code></pre><p>template <class type=""> class class-name {<br>//类主体<br>}</class></p>
-<p>//使用方法<br>class-name&lt;类型&gt; c;</p>
-<pre><code>
-## 模板形参
-像函数形参一样，程序员为模板形参选择的名字没有本质的含义。也就是说，模板形参惨的名称可以由程序员自己定义，如下所示都是合法的：</code></pre><p>template<typename a=""><br>template<typename b=""></typename></typename></p>
-<pre><code>
-**模板形参作用域**：
-模板形参的名字可以在声明为模板形参之后直到模板声明或定义的末尾处使用。模板形参遵循常规名字屏蔽规则。与全局作用域中声明的对象、函数或类型同名的模板形参会屏蔽全局名字：</code></pre><p>typedef double T;<br>template <class t=""> T calc(const T &amp;a, const T &amp;b){<br>    //tmp has the type of the template parameter T<br>    //not that of the global typedef<br>    T tmp = a;<br>    //..<br>    return tmp;<br>}</class></p>
-<pre><code>
-**使用模板形参名字的限制**：
-用作模板形参的名字不能在模板内部重用：</code></pre><p>template <class t=""> T calc(const T &amp;a, const T &amp;b){<br>    typedef double T; //error:redeclares template parameter T<br>    T tmp = a;<br>    // …<br>    return tmp;<br>}</class></p>
-<pre><code>这个限制还意味着模板形参的名字只能在同一模板形参表中使用一次：</code></pre><p>//error:illegal reuse of template parameter name v<br>template&lt;class v, class v&gt; v calc(const v&amp;, const v&amp;);</p>
-<pre><code>当然，正如可以重用函数形参名字一样，模板形参的名字也能在不同模板中重用：</code></pre><p>template <class t=""> T calc(const T&amp;, const T&amp;);<br>template <class t=""> T compare(const T&amp;, const T&amp;);</class></class></p>
-<pre><code>**模板声明**：
-像其他任意函数或类一样，对于模板可以只声明而不定义。声明必须指出函数或类是一个模板：</code></pre><p>//declares compare but does not define it<br>template <class t=""> int compare(const T&amp;, const T&amp;);</class></p>
-<pre><code>同一模板的声明和定义中，模板形参的名字不必相同：</code></pre><p>//all three uses of calc refer to the same function template<br>//forward declarations of the template<br>template <class t=""> T calc(const T&amp;, const T&amp;);<br>template <class u=""> U calc(const U&amp;, const U&amp;);<br>//actual definition of the template<br>template <class type=""><br>Type calc(const Type&amp; a, const Type&amp; b){…}</class></class></class></p>
-<pre><code>每个模板类型形参前面必须带上关键字class或typename，每个非类型形参前面必须带上类型名字，省略关键字或类型说明符是错误的：</code></pre><p>//error:must precede U by either typename of class<br>template &lt;typename T, U&gt; T calc(const T&amp;, const U&amp;);</p>
-<pre><code>
-## typename与class的区别
+using namespace std;
 
-类型形参由关键字class或者typename后接说明符构成。在函数模板形参表中，关键字typename和class具有相同的含义，可以互换使用，两个关键字都可以在同一模板形参表中使用。使用关键字typename代替关键字class指定模板类型形参也许更为直观，毕竟，可以使用内置类型（非类类型）作为实际的类型形参，而且，typename更清楚的指明后面的名字是一个类型名。但是，关键字typename是作为标准C++的组成部分加入到C++中，因此旧的程序更有可能只用class关键字。  
-除了定义数据成员或者函数成员外，类还可以定义类型成员。考虑如下函数：</code></pre><p>template &lt;class Parm, class U&gt;<br>Parm fcn(Parm* array, U value){<br>    Parm::size_type *p; //If Parm::size_type is a type, then a declaration<br>    //If Parm::size_type is an object, then multiplication<br>}</p>
-<pre><code>我们知道size_type必定是绑定到Parm的那个类型的成员，但我们不知道size_type是一个类型成员的名字还是一个数据成员的名字，默认情况下，编译器假定这样的名字指定数据成员，而不是类型。
+class Printer {
+public:
+    template&lt;typename T&gt;
+    void print(const T&amp; t) {
+        cout &lt;&lt; t &lt;&lt;endl;
+    }
+};
 
-如果希望编译器将size_type当作类型，则必须显式的告诉编译器这样做：</code></pre><p>template &lt;class Parm, class U&gt;<br>Parm fcn(Parm&amp; array, U value){<br>    typename Parm::size_type *p; //ok:declares p to be a pointer<br>}</p>
-<pre><code>通过在成员名前加上关键字typename作为前缀，可以告诉编译器将成员当作类型。
+int main(){
 
-如果拿不准是否需要以typename指明一个名字是一个类型，那么指定它是一个好主意。在类型之前指定typename没有害处，因此，即使typename是不必要的，也没关系。
+    Printer p;
+    p.print("abc");
+    p.print(56);
 
-## 非类型模板参数
-
-模板形参不必都是类型。在调用函数时非类型形参将用值代替，值的类型在模板形参表中指定。例如，下面的函数模板声明了array_init是一个含有类型模板形参和一个非类型模板形参的函数模板。函数本身接受一个形参，该形参是数组的引用：</code></pre><p>//initialize elements of an array to zero<br>template &lt;class T, size_t N&gt; void array_init(T (&amp;parm)[N]){<br>    for(size_t i = 0; i != N; ++i){<br>        parm[i] = 0;<br>    }<br>}</p>
-<pre><code>模板非类型形参是模板定义内部的常量值，在需要常量表达式的时候，可使用非类型形参。  
-当调用array_init时，编译器从数组实参计算非类型形参的值：</code></pre><p>int x[42];<br>double y[10];<br>array_init(x); //instantiates array_init(int(&amp;)[42])<br>array_init(y); //instantiates array_init(double(&amp;)[10])</p>
-<pre><code>对于上面的程序，编译器将实例化array_init的两个版本：第一个实例的形参绑定到int[42],另一个实例中的形参绑定到double[10]。对于模板的非类型形参而言，求值结果相同的表达式将认为是等价的。</code></pre><p>int x[42];<br>const int sz = 40;<br>int y[sz+2];<br>array_init(x); //instantiates array_init(int(&amp;)[42])<br>array_init(y); //equivalent instantiation</p>
-<pre><code>
-接下来我们了解一下类模板的非类型形参：</code></pre><p>template&lt;int hi, int wid&gt;<br>class Screen{<br>public:<br>    //template nontype parameters used to initialize data members<br>    Screen():screen(hi * wid, ‘#’),cursor(0),height(hi),width(wid) {}<br>    //…<br>private:<br>    std::string   screen;<br>    std::string::size_type cursor;<br>    std::string::size_type height,width;<br>}</p>
-<pre><code>这个模板有两个形参，均为非类型形参。当用户定义Screen对象时，必须为每个形参提供常量表达式以供使用。类在默认构造函数中使用这些形参设置默认Screen的尺寸。
-像任意类模板一样，使用Screen类型时必须显式声明形参值：</code></pre><p>Screen&lt;24, 80&gt; hp2621; //screen 24 lines by 80 characters</p>
-<pre><code>
-
-## 参考资料
-
-本文大部分内容摘自：《C++ Primer》  
-[菜鸟教程--C++模板](https://www.runoob.com/cplusplus/cpp-templates.html)  
-[菜鸟教程--C++模板详解](https://www.runoob.com/w3cnote/c-templates-detail.html)  
-[关于编译性语言、解释性语言和脚本语言,动态语言,静态语言的区别](https://blog.csdn.net/lcg910978041/article/details/50696196)  
-[C++ Template 基础篇（一）：函数模板](https://blog.csdn.net/lezardfu/article/details/56852043)  </code></pre><script>
+    return 0;
+}</code></pre><h2 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h2><p>就像定义模板函数，我们也可以定义类模板，类模板一般形式如下所示：</p>
+<pre><code>template &lt;class type&gt; class class-name {
+//类主体
+}
+//使用方法
+class-name&lt;类型&gt; c;</code></pre><h2 id="模板形参"><a href="#模板形参" class="headerlink" title="模板形参"></a>模板形参</h2><p>像函数形参一样，程序员为模板形参选择的名字没有本质的含义。也就是说，模板形参惨的名称可以由程序员自己定义，如下所示都是合法的：</p>
+<pre><code>template&lt;typename A&gt;
+template&lt;typename B&gt;</code></pre><p><strong>模板形参作用域</strong>：<br>模板形参的名字可以在声明为模板形参之后直到模板声明或定义的末尾处使用。模板形参遵循常规名字屏蔽规则。与全局作用域中声明的对象、函数或类型同名的模板形参会屏蔽全局名字：</p>
+<pre><code>typedef double T;
+template &lt;class T&gt; T calc(const T &amp;a, const T &amp;b){
+    //tmp has the type of the template parameter T
+    //not that of the global typedef
+    T tmp = a;
+    //..
+    return tmp;
+}</code></pre><p><strong>使用模板形参名字的限制</strong>：<br>用作模板形参的名字不能在模板内部重用：</p>
+<pre><code>template &lt;class T&gt; T calc(const T &amp;a, const T &amp;b){
+    typedef double T; //error:redeclares template parameter T
+    T tmp = a;
+    // ...
+    return tmp;
+}</code></pre><p>这个限制还意味着模板形参的名字只能在同一模板形参表中使用一次：</p>
+<pre><code>//error:illegal reuse of template parameter name v
+template&lt;class v, class v&gt; v calc(const v&amp;, const v&amp;);</code></pre><p>当然，正如可以重用函数形参名字一样，模板形参的名字也能在不同模板中重用：</p>
+<pre><code>template &lt;class T&gt; T calc(const T&amp;, const T&amp;);
+template &lt;class T&gt; T compare(const T&amp;, const T&amp;);</code></pre><p><strong>模板声明</strong>：<br>像其他任意函数或类一样，对于模板可以只声明而不定义。声明必须指出函数或类是一个模板：</p>
+<pre><code>//declares compare but does not define it
+template &lt;class T&gt; int compare(const T&amp;, const T&amp;);</code></pre><p>同一模板的声明和定义中，模板形参的名字不必相同：</p>
+<pre><code>//all three uses of calc refer to the same function template
+//forward declarations of the template
+template &lt;class T&gt; T calc(const T&amp;, const T&amp;);
+template &lt;class U&gt; U calc(const U&amp;, const U&amp;);
+//actual definition of the template
+template &lt;class Type&gt;
+Type calc(const Type&amp; a, const Type&amp; b){...}</code></pre><p>每个模板类型形参前面必须带上关键字class或typename，每个非类型形参前面必须带上类型名字，省略关键字或类型说明符是错误的：</p>
+<pre><code>//error:must precede U by either typename of class
+template &lt;typename T, U&gt; T calc(const T&amp;, const U&amp;);</code></pre><h2 id="typename与class的区别"><a href="#typename与class的区别" class="headerlink" title="typename与class的区别"></a>typename与class的区别</h2><p>类型形参由关键字class或者typename后接说明符构成。在函数模板形参表中，关键字typename和class具有相同的含义，可以互换使用，两个关键字都可以在同一模板形参表中使用。使用关键字typename代替关键字class指定模板类型形参也许更为直观，毕竟，可以使用内置类型（非类类型）作为实际的类型形参，而且，typename更清楚的指明后面的名字是一个类型名。但是，关键字typename是作为标准C++的组成部分加入到C++中，因此旧的程序更有可能只用class关键字。<br>除了定义数据成员或者函数成员外，类还可以定义类型成员。考虑如下函数：</p>
+<pre><code>template &lt;class Parm, class U&gt;
+Parm fcn(Parm* array, U value){
+    Parm::size_type *p; //If Parm::size_type is a type, then a declaration
+    //If Parm::size_type is an object, then multiplication
+}</code></pre><p>我们知道size_type必定是绑定到Parm的那个类型的成员，但我们不知道size_type是一个类型成员的名字还是一个数据成员的名字，默认情况下，编译器假定这样的名字指定数据成员，而不是类型。</p>
+<p>如果希望编译器将size_type当作类型，则必须显式的告诉编译器这样做：</p>
+<pre><code>template &lt;class Parm, class U&gt;
+Parm fcn(Parm&amp; array, U value){
+    typename Parm::size_type *p; //ok:declares p to be a pointer
+}</code></pre><p>通过在成员名前加上关键字typename作为前缀，可以告诉编译器将成员当作类型。</p>
+<p>如果拿不准是否需要以typename指明一个名字是一个类型，那么指定它是一个好主意。在类型之前指定typename没有害处，因此，即使typename是不必要的，也没关系。</p>
+<h2 id="非类型模板参数"><a href="#非类型模板参数" class="headerlink" title="非类型模板参数"></a>非类型模板参数</h2><p>模板形参不必都是类型。在调用函数时非类型形参将用值代替，值的类型在模板形参表中指定。例如，下面的函数模板声明了array_init是一个含有类型模板形参和一个非类型模板形参的函数模板。函数本身接受一个形参，该形参是数组的引用：</p>
+<pre><code>//initialize elements of an array to zero
+template &lt;class T, size_t N&gt; void array_init(T (&amp;parm)[N]){
+    for(size_t i = 0; i != N; ++i){
+        parm[i] = 0;
+    }
+}</code></pre><p>模板非类型形参是模板定义内部的常量值，在需要常量表达式的时候，可使用非类型形参。<br>当调用array_init时，编译器从数组实参计算非类型形参的值：</p>
+<pre><code>int x[42];
+double y[10];
+array_init(x); //instantiates array_init(int(&amp;)[42])
+array_init(y); //instantiates array_init(double(&amp;)[10])</code></pre><p>对于上面的程序，编译器将实例化array_init的两个版本：第一个实例的形参绑定到int[42],另一个实例中的形参绑定到double[10]。对于模板的非类型形参而言，求值结果相同的表达式将认为是等价的。</p>
+<pre><code>int x[42];
+const int sz = 40;
+int y[sz+2];
+array_init(x); //instantiates array_init(int(&amp;)[42])
+array_init(y); //equivalent instantiation</code></pre><p>接下来我们了解一下类模板的非类型形参：</p>
+<pre><code>template&lt;int hi, int wid&gt;
+class Screen{
+public:
+    //template nontype parameters used to initialize data members
+    Screen():screen(hi * wid, '#'),cursor(0),height(hi),width(wid) {}
+    //...
+private:
+    std::string   screen;
+    std::string::size_type cursor;
+    std::string::size_type height,width;
+}</code></pre><p>这个模板有两个形参，均为非类型形参。当用户定义Screen对象时，必须为每个形参提供常量表达式以供使用。类在默认构造函数中使用这些形参设置默认Screen的尺寸。<br>像任意类模板一样，使用Screen类型时必须显式声明形参值：</p>
+<pre><code>Screen&lt;24, 80&gt; hp2621; //screen 24 lines by 80 characters</code></pre><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文大部分内容摘自：《C++ Primer》<br><a href="https://www.runoob.com/cplusplus/cpp-templates.html" target="_blank" rel="noopener">菜鸟教程–C++模板</a><br><a href="https://www.runoob.com/w3cnote/c-templates-detail.html" target="_blank" rel="noopener">菜鸟教程–C++模板详解</a><br><a href="https://blog.csdn.net/lcg910978041/article/details/50696196" target="_blank" rel="noopener">关于编译性语言、解释性语言和脚本语言,动态语言,静态语言的区别</a><br><a href="https://blog.csdn.net/lezardfu/article/details/56852043" target="_blank" rel="noopener">C++ Template 基础篇（一）：函数模板</a>  </p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
