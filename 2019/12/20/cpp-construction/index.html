@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="UML类图详解, java、服务器、消息中间件、C++">
-    <meta name="description" content="UML类图简介一、UML类图简介​    在UML建模中类图(Class diagram)主要是显示了模型的静态结构，特别是模型中存在的类、类的内部结构以及它们与其他类的关系等。类图不显示暂时性的信息。类图是面向对象建模的主要组成部分。它既">
+    <meta name="keywords" content="C++构造类型, java、服务器、消息中间件、C++">
+    <meta name="description" content="C++构造类型C++提供了多种基本的数据类型（int、char、double等）供用户使用，但是由于程序处理的问题往往比较复杂，而且呈现多样化，已有的基本数据类型很难满足使用要求。为了将不同类型的数据联合起来，作为一个整体进行处理，C++提">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>UML类图详解 | AHSpace</title>
+    <title>C++构造类型 | AHSpace</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/UML/类图/UML.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/c++/CPP.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        UML类图详解
+                        C++构造类型
                     </div>
                 </div>
             </div>
@@ -378,12 +378,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/UML静态结构/" target="_blank">
-                                <span class="chip bg-color">UML静态结构</span>
+                            <a href="/tags/C-构造类型/" target="_blank">
+                                <span class="chip bg-color">C++构造类型</span>
                             </a>
                         
-                            <a href="/tags/类图/" target="_blank">
-                                <span class="chip bg-color">类图</span>
+                            <a href="/tags/结构体/" target="_blank">
+                                <span class="chip bg-color">结构体</span>
+                            </a>
+                        
+                            <a href="/tags/共用体/" target="_blank">
+                                <span class="chip bg-color">共用体</span>
+                            </a>
+                        
+                            <a href="/tags/枚举/" target="_blank">
+                                <span class="chip bg-color">枚举</span>
                             </a>
                         
                     </div>
@@ -394,8 +402,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/UML/" class="post-category" target="_blank">
-                                UML
+                            <a href="/categories/c-c/" class="post-category" target="_blank">
+                                c/c++
                             </a>
                         
                     </div>
@@ -406,21 +414,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-28
+                    2019-12-20
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.8k
+                        2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        6 分
+                        7 分
                     </div>
                     
                 
@@ -436,56 +444,77 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="UML类图简介"><a href="#UML类图简介" class="headerlink" title="UML类图简介"></a>UML类图简介</h3><h2 id="一、UML类图简介"><a href="#一、UML类图简介" class="headerlink" title="一、UML类图简介"></a>一、UML类图简介</h2><p>​    在UML建模中类图(Class diagram)主要是显示了模型的静态结构，特别是模型中存在的<strong>类</strong>、<strong>类的内部结构</strong>以及<strong>它们与其他类的关系</strong>等。类图不显示暂时性的信息。类图是面向对象建模的主要组成部分。它既用于应用程序的系统分类的一般概念建模，也用于详细建模，将模型转换成编程代码。</p>
-<p>​    类图中最基本的元素是类或者接口。</p>
-<p>​    类图主要用在面向对象<strong>软件开发的分析和设计阶段</strong>，描述系统的静态结构。类图图示了所构建系统的所有实体、实体的内部结构以及实体之间的关系。即，类图中包含从用户的客观世界模型中抽象出来的类、类的内部结构和类与类之间的关系，它是构建其他设计模型的基础，没有类图，就没有<strong>对象图</strong>、<strong>状态图</strong>、<strong>协作图</strong>等其他UMI。动态模型图也就无法表示系统的动态行为。类图也是面向对象编程的起点和依据。类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。</p>
-<p> ——————以上来自百度百科。</p>
-<h2 id="二、UML中类的表达方式"><a href="#二、UML中类的表达方式" class="headerlink" title="二、UML中类的表达方式"></a>二、UML中类的表达方式</h2><p>​    在UML类图中，一个类主要包含类名、属性以及方法。将三部分用矩形框起来并加上分割线就表示一个类。如下图所示：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E4%B8%80.png" alt="图 1"></p>
-<p>上图展示了枚举、接口以及类的表示方式，如果类的表示方式中蓝色部分的类名称使用斜体，则表示该类为抽象类。</p>
-<p>实际上，属性的完整表示方式是这样的：</p>
-<p><strong>可见性  名称 ：类型 [ = 缺省值]</strong></p>
-<p>方法的完整表示方式如下：</p>
-<p><strong>可见性  名称(参数列表) [ ： 返回类型]</strong></p>
-<p>其中，中括号中的内容是可选的。</p>
-<p>属性前边的符号含义如下：</p>
-<ul>
-<li>-表示属性为private</li>
-<li>+表示属性为public</li>
-<li>#表示属性为 protected</li>
-</ul>
-<h2 id="三、类与类之间关系表示方式"><a href="#三、类与类之间关系表示方式" class="headerlink" title="三、类与类之间关系表示方式"></a>三、类与类之间关系表示方式</h2><h3 id="3-1-关联关系"><a href="#3-1-关联关系" class="headerlink" title="3.1 关联关系"></a>3.1 关联关系</h3><p>关联关系包括：单向关联、双向关联、自关联。</p>
-<h4 id="3-1-1-单向关联"><a href="#3-1-1-单向关联" class="headerlink" title="3.1.1 单向关联"></a>3.1.1 单向关联</h4><p>定义：单向关联表示一个类A将另一个类B作为类内部的成员，类A可以调用类B中的公共属性和方法。如下图所示：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E4%BA%8C.png" alt="图 2"></p>
-<p>在UML类图中单向关联用一个带箭头的实线表示。上图表示每个顾客都有一个地址，这通过让Consumer类持有一个类型为Address的成员变量类实现 。</p>
-<h4 id="3-1-2-双向关联"><a href="#3-1-2-双向关联" class="headerlink" title="3.1.2 双向关联"></a>3.1.2 双向关联</h4><p>定义： 双向关联就是双方各自持有对方类型的成员变量 ，都可以调用对方的公共属性和方法。具体表示如下图：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E4%B8%89.png" alt="图 3"></p>
-<p>在UML类图中，双向关联用一个不带箭头的实线表示。上图中在Consumer类中维护一个Product[]数组，表示一个顾客购买了那些产品；在Product类中维护一个Consumer类型的成员变量表示这个产品被哪个顾客所购买。 </p>
-<h4 id="3-1-3-自身关联"><a href="#3-1-3-自身关联" class="headerlink" title="3.1.3 自身关联"></a>3.1.3 自身关联</h4><p>定义：自身关联也叫反身关联，自己引用自己，带着一个自己的引用。如下图所示：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E5%9B%9B.png" alt="图 4"></p>
-<p>自身关联在UML类图中用一个带有箭头且指向自身的实线表示。上图的意思就是Node类包含类型为Node的成员变量，也就是“自己包含自己”。 </p>
-<h3 id="3-2-聚合关系"><a href="#3-2-聚合关系" class="headerlink" title="3.2 聚合关系"></a>3.2 聚合关系</h3><p>定义： 聚合用来表示集体与个体之间的关联关系 。如下图所示：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E4%BA%94.png" alt="图 5"></p>
-<p>UML中聚合关系用实线加空心菱形表示。聚合关系强调是“集体”包含“个体”，但是“个体”可以脱离“集体”而单独存在。比如上图中班级包含了学生，而学生脱离了班级也能单独存在。 </p>
-<h3 id="3-3-组合关系"><a href="#3-3-组合关系" class="headerlink" title="3.3 组合关系"></a>3.3 组合关系</h3><p>定义： 组合又叫复合，用来表示个体与组成部分之间的关联关系， 如下图所示：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E5%85%AD.png" alt="图 6"></p>
-<p>组合关系与聚合关系见得最大不同在于：这里的“部分”脱离了“整体”便不复存在 。</p>
-<p><strong>聚合与组合的对比：</strong><br>（1）聚合关系没有组合紧密。<br>学生不会因为班级的解散而无法存在，聚合关系的类具有不同的生命周期；而学生如果没有心脏将无法存活，组合关系的类具有相同的生命周期。</p>
-<p>这个从构造函数可以看出。聚合类的构造函数中包含另一个类的实例作为参数，因为构造函数中传递另一个类的实例，因此学生可以脱离班级体独立存在。组合类的构造函数包含另一个类的实例化。因为在构造函数中进行实例化，因此两者紧密耦合在一起，同生同灭，学生不能脱离心脏而存在。</p>
-<p>（2）信息的封装性不同。<br>在聚合关系中，客户端可以同时了解Classes类和Student类，因为他们是独立的。</p>
-<p>在组合关系中，客户端只认识Student类，根本不知道Heart类的存在，因为心脏类被严密地封装在学生类中。</p>
-<p>理解聚合与复合的区别，主要在于聚合的成员可独立，复合的成员必须依赖于整体才有意义。</p>
-<h3 id="3-3-依赖关系"><a href="#3-3-依赖关系" class="headerlink" title="3.3 依赖关系"></a>3.3 依赖关系</h3><p>定义： 依赖关系是五种关系中耦合最小的一种关系。类A要完成某个功能引用了类B，则类A依赖类B。依赖在代码中主要体现为<strong>类A的某个成员函数的返回值、形参、局部变量或静态方法的调用，则表示类A引用了类B</strong>。 如下图所示：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E4%B8%83.png" alt="图 7"></p>
-<p>Driver的drive方法只有传入了一个Car对象才能发挥作用，因此我们说Driver类依赖于Car类。在UML类图中，依赖关系用一条带有箭头的虚线表示。 </p>
-<h3 id="3-4-继承关系"><a href="#3-4-继承关系" class="headerlink" title="3.4 继承关系"></a>3.4 继承关系</h3><p>定义： 继承关系对应的是extend关键字，如果一个类别B“继承自”另一个类别A，就把这个B称为“A的子类”，而把A称为“B的父类别”也可以称“A是B的超类”。继承可以使得子类具有父类别的各种属性和方法，而不需要再次编写相同的代码。 如下图所示：</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E5%85%AB.png" alt="图 8"></p>
-<p>在UML类图中用带空心三角形的直线表示 。</p>
-<h3 id="3-5-接口实现关系"><a href="#3-5-接口实现关系" class="headerlink" title="3.5 接口实现关系"></a>3.5 接口实现关系</h3><p>这种关系对应implement关键字，在UML类图中用带空心三角形的虚线表示。如下图中，Car类与Ship类都实现了Vehicle接口。</p>
-<p><img src="/images/UML/%E7%B1%BB%E5%9B%BE/%E5%9B%BE%E4%B9%9D.png" alt="图 9"></p>
-<p><strong>参考资料：</strong></p>
-<p><a href="https://www.cnblogs.com/shindo/p/5579191.html" target="_blank" rel="noopener">五分钟读懂UML类图</a></p>
-<p><a href="https://blog.csdn.net/K346K346/article/details/59582926" target="_blank" rel="noopener">认识 UML 类关系——依赖、关联、聚合、组合、泛化</a></p>
+                <h2 id="C-构造类型"><a href="#C-构造类型" class="headerlink" title="C++构造类型"></a>C++构造类型</h2><p>C++提供了多种基本的数据类型（int、char、double等）供用户使用，但是由于程序处理的问题往往比较复杂，而且呈现多样化，已有的基本数据类型很难满足使用要求。为了将不同类型的数据联合起来，作为一个整体进行处理，C++提供了结构体类型（structure）、共用体类型（union）、枚举类型（enumeration）、类类型（class）等，这样的类型成为构造类型。</p>
+<h2 id="结构体类型"><a href="#结构体类型" class="headerlink" title="结构体类型"></a>结构体类型</h2><p><strong>C语言结构体与C++结构体的区别</strong>：  </p>
+<p>C++中结构体类型是从C语言继承而来，是C语言中聚合数据类型(aggregate data type)的一类。结构体可以被声明为变量、指针或数组等，用以实现较复杂的数据结构。声明结构体类型的一般形式如下：</p>
+<pre><code>struct 结构体名称{
+    数据类型1 成员1;
+    数据类型2 成员2;
+    .
+    .
+    .
+    数据类型n 成员n;
+}</code></pre><p>对于结构体成员，可以通过成员运算符”.”对其进行访问。</p>
+<p>在C语言中的结构体只涉及到数据结构，而不涉及算法。换句话说C语言中的结构体只能定义成员变量，但不能定义成员函数。而C++对此加以扩充，结构体的成员既可以包括数据(即数据成员)，又可以包括函数(即函数成员)，以适应面向对象的程序设计。C++中的结构体和类体现了数据结构和算法的结合。  </p>
+<p>既然C语言的结构体中只能包含成员变量，那么可不可以将指向函数的指针放到结构体中，这样是不是也能实现利用结构体来调用函数呢？答案是肯定的，看下面的例子：</p>
+<pre><code>#include &lt;stdio.h&gt;
+//定义一个函数
+void myfun(int num){
+    printf("hello! %d\n", num);
+}
+//定义结构体
+typedef struct {
+    int num;
+    //指向一个函数的指针
+    void (*print)(int);
+}Student;
+//main函数
+int main() {
+    Student stu;
+    //初始化结构体
+    stu.num = 2015;
+    //让函数指针print指向myfun()函数
+    stu.print = &amp;myfun;
+    //调用函数
+    stu.print(stu.num);
+    return 0;
+}</code></pre><p><strong>C++结构体和类的区别</strong>：</p>
+<p>C++结构体与类相似，也可以包含构造函数，常数，字段，方法，属性，索引器，运算符和嵌套类型等，不过，结构体是值类型。</p>
+<p>概念：class和struct的语法基本相同，从声明到使用，都很相似，但是struct的约束要比class多，理论上，struct能做到的class都能做到，但class能做到的stuct却不一定做的到。</p>
+<p>类型：struct是值类型，class是引用类型，因此它们具有所有值类型和引用类型之间的差异。</p>
+<p>效率：由于堆栈的执行效率要比堆的执行效率高，但是堆栈资源却很有限，不适合处理逻辑复杂的大对象，因此struct常用来处理作为基类型对待的小对象，而class来处理某个商业逻辑。值类型的内存不由垃圾回收控制，作用域结束时，值类型会自行释放，减少了托管堆的压力，因此具有性能上的优势。因此，结构体没有析构函数。</p>
+<p>关系：struct不仅能继承也能被继承 ，而且可以实现接口，不过Class可以完全扩展。内部结构有区别，struct只能添加带参的构造函数，不能使用abstract和protected等修饰符，不能初始化实例字段。</p>
+<p>什么时候用结构体呢？结构体使用简单，并且很有用，但是要牢记：结构体在堆栈中创建，是值类型，而类是引用类型。每当需要一种经常使用的类型，而且大多数情况下该类型只是一些数据时，使用结构体能比使用类获得更佳性能。</p>
+<p>结构体是值类型，所以会影响性能，但根据使用结构体的方式，这种影响可能是正面的，也可能是负面的。正面的影响是为结构体分配内存时，速度非常快，因为它们将内联或者保存在堆栈中。在结构体超出了作用域被删除时，速度也很快。另一方面，只要把结构体作为参数来传递或者把一个结构体赋给另一个结构体(例如A=B，其中A和B是结构体)，结构体的所有内容就被复制，而对于类，则只复制引用。这样，就会有性能损失，根据结构体的大小，性能损失也不同。注意，结构体主要用于小的数据结构。但当把结构作为参数传递给方法时，就应把它作为ref参数传递，以避免性能损失——此时只传递了结构在内存中的地址，这样传递速度就与在类中的传递速度一样快了。另一方面，如果这样做，就必须注意被调用的方法可以改变结构的值。</p>
+<h2 id="共用体类型"><a href="#共用体类型" class="headerlink" title="共用体类型"></a>共用体类型</h2><p>有时在一组数据中，任何两个数据不会同时有效。例如，当学生和教师放在一个表中的时候，根据职业不同，若是学生，应输入学生的成绩，需要用实数存储；若是教师，则输入教师的工资，需要用整数存储。也就是说，某一时刻，两者只能选择其一，此时可以使用共用体类型来表示。声明共用体类型的一般形式如下：</p>
+<pre><code>union 共用体名称{
+    数据类型1 成员1;
+    数据类型2 成员2;
+    .
+    .
+    .
+    数据类型n 成员n;
+}</code></pre><p><strong>共用体类型数据的特点</strong>：  </p>
+<ol>
+<li>使用共用体变量的目的是希望用同一个内存段存放几种不同类型的数据。但请注意：在每一瞬时只能存放其中一种，而不是同时存放几种。</li>
+<li>能够访问的是共用体变量中最后一次被赋值的成员，在对一个新的成员赋值后原有的成员就失去作用。</li>
+<li>共用体变量的地址和它的各成员的地址都是同一地址。</li>
+<li>不能对共用体变量名赋值；不能企图引用变量名来得到一个值；不能在定义共用体变量时对它初始化；不能用共用体变量名作为函数参数。</li>
+</ol>
+<h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><p>枚举是用标识符表示的整型常量的集合。声明枚举类型的一般形式如下：</p>
+<pre><code>enum 枚举类型名{枚举元素1, 枚举元素2 ,..., 枚举元素n};</code></pre><ol>
+<li><p>枚举元素不能同名，若不指定枚举元素的起始值，系统将自动从0开始为每个枚举值设置初值，后面的枚举值依次加一。<br>若指定某个枚举元素的值，而下一个枚举元素没有指定值，那么其值是上一个枚举值增加一。<br>enum weekDays{Sun=7, Mon=1, Tue, Wed, Thu, Fri, Sat};<br>枚举元素Tue，Wed，Thu，Fri，Sat的值分别为2，3，4，5，6。</p>
+</li>
+<li><p>C++中定义枚举类型变量，可以不用关键字enum。</p>
+</li>
+<li><p>若声明无名枚举类型，枚举元素可以作为常量使用。</p>
+</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.jianshu.com/p/0b6b0b774067" target="_blank" rel="noopener">C结构体、C++结构体和C++类的定义和区别</a>  </p>
+<p><a href="https://blog.csdn.net/fengxinziyang/article/details/5909237" target="_blank" rel="noopener">C++结构体和类的区别</a>  </p>
+<p><a href="https://blog.csdn.net/qsyzb/article/details/9896543" target="_blank" rel="noopener">C++结构体的定义、初始化和引用</a>  </p>
+<p><a href="https://blog.csdn.net/Loving_Forever_/article/details/51483828" target="_blank" rel="noopener">详解C结构体、C++结构体 和 C++类的区别</a>  </p>
+<p><a href="http://c.biancheng.net/cpp/biancheng/view/176.html" target="_blank" rel="noopener">C++共用体</a>  </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -662,9 +691,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《UML类图详解》
+                    《C++构造类型》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/28/UML类图/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/20/cpp-construction/" property="cc:attributionName"
                rel="cc:attributionURL">
                 anhua
             </a> 采用
@@ -704,53 +733,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/06/githubSearch/">
+                <a href="/2019/12/20/cpp-construction/">
                     <div class="card-image">
                         
-                        <img src="/images/github/github封面.png" class="responsive-img" alt="GitHub高级检索">
+                        <img src="/images/c++/CPP.jpg" class="responsive-img" alt="C++构造类型">
                         
-                        <span class="card-title">GitHub高级检索</span>
+                        <span class="card-title">C++构造类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用GitHub的高级检索功能更加高效、准确、快速的找到自己所感兴趣或需要的开源项目
+                            C++构造类型C++提供了多种基本的数据类型（int、char、double等）供用户使用，但是由于程序处理的问题往往比较复杂，而且呈现多样化，已有的基本数据类型很难满足使用要求。为了将不同类型的数据联合起来，作为一个整体进行处理，C++提
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/GitHub/" class="post-category" target="_blank">
-                                    GitHub
+                            <a href="/categories/c-c/" class="post-category" target="_blank">
+                                    c/c++
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/GitHub搜索/" target="_blank">
-                        <span class="chip bg-color">GitHub搜索</span>
+                    <a href="/tags/C-构造类型/" target="_blank">
+                        <span class="chip bg-color">C++构造类型</span>
                     </a>
                     
-                    <a href="/tags/GitHub高级检索/" target="_blank">
-                        <span class="chip bg-color">GitHub高级检索</span>
+                    <a href="/tags/结构体/" target="_blank">
+                        <span class="chip bg-color">结构体</span>
                     </a>
                     
-                    <a href="/tags/GitHub-advanced-search/" target="_blank">
-                        <span class="chip bg-color">GitHub advanced search</span>
+                    <a href="/tags/共用体/" target="_blank">
+                        <span class="chip bg-color">共用体</span>
+                    </a>
+                    
+                    <a href="/tags/枚举/" target="_blank">
+                        <span class="chip bg-color">枚举</span>
                     </a>
                     
                 </div>
@@ -764,30 +799,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/27/mavenSettings/">
+                <a href="/2019/12/19/cpp-template/">
                     <div class="card-image">
                         
-                        <img src="/images/maven/maven.jpg" class="responsive-img" alt="maven基本配置---本地仓库+阿里云远程库">
+                        <img src="/images/c++/cpp_template.png" class="responsive-img" alt="C++模板">
                         
-                        <span class="card-title">maven基本配置---本地仓库+阿里云远程库</span>
+                        <span class="card-title">C++模板</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            maven本地仓库配置+修改远程仓库
+                            C++模板模板是泛型编程的基础，泛型编程，即以一种独立于任何特定类型的方式编码。模板是创建泛型类或函数的蓝图或公式。C++中使用template关键字来定义模板。  
+在理解泛型之前，首先我们需要了解什么时泛型编程，简单点来说，因为C++是
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/maven/" class="post-category" target="_blank">
-                                    maven
+                            <a href="/categories/c-c/" class="post-category" target="_blank">
+                                    c/c++
                                 </a>
                             
                             
@@ -797,12 +833,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/maven本地仓库配置/" target="_blank">
-                        <span class="chip bg-color">maven本地仓库配置</span>
+                    <a href="/tags/C-模板/" target="_blank">
+                        <span class="chip bg-color">C++模板</span>
                     </a>
                     
-                    <a href="/tags/maven添加阿里云远程仓库/" target="_blank">
-                        <span class="chip bg-color">maven添加阿里云远程仓库</span>
+                    <a href="/tags/C-template关键字/" target="_blank">
+                        <span class="chip bg-color">C++ template关键字</span>
                     </a>
                     
                 </div>
