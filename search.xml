@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CppUnit编译_VS 2019</title>
+      <link href="/2020/01/27/cpp-cppunit/"/>
+      <url>/2020/01/27/cpp-cppunit/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>CppUnit</strong>是用于<a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener">C ++编程语言</a>的<a href="https://en.wikipedia.org/wiki/Unit_Test" target="_blank" rel="noopener">单元测试</a>框架模块。它允许对<a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener">C</a>源代码以及C ++ 进行单元测试，而只需最少的源代码修改。它由Michael Feathers于2000年左右启动，最初是Windows 的<a href="https://en.wikipedia.org/wiki/JUnit" target="_blank" rel="noopener">JUnit</a>的C ++ <a href="https://en.wikipedia.org/wiki/Porting" target="_blank" rel="noopener">端口</a>，并由Jerome Lacoste移植到Unix。<a href="https://en.wikipedia.org/wiki/CppUnit#cite_note-2" target="_blank" rel="noopener">[2]</a>该库是根据<a href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License" target="_blank" rel="noopener">GNU次通用公共许可证发行的</a>。</p><p>本文将介绍在windows环境下使用VS 2019进行编译。</p><ol><li><p>下载地址：<a href="https://sourceforge.net/projects/cppunit/files/cppunit/1.12.1/cppunit-1.12.1.tar.gz/download" target="_blank" rel="noopener">cppunit-1.12.1.tar.gz</a></p></li><li><p>解压。</p></li><li><p>使用VS 2019打开{CPPUNIT_HOME}\src\CppUnitLibraries.dsw。</p></li><li><p>使用VS的Release版本进行编译，如下图所示：</p></li></ol><p><img src="/images/c++/cppunit/%E5%9B%BE%E4%B8%80.png" alt="ALT 图一"></p><ol start="5"><li>右键cppunit项目，点击生成，编译成功后如下图所示：</li></ol><p><img src="/images/c++/cppunit/%E5%9B%BE%E4%BA%8C.png" alt="ALT 图二"></p><ol start="6"><li>编译完成后我们可以在{CPPUNIT_HOME}\lib目录下找到cppunit.lib库文件。</li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> c/c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CppUnit编译 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>visual studio 2019下进行apr、apr-iconv、apr-util编译</title>
       <link href="/2020/01/23/APR_Compile/"/>
       <url>/2020/01/23/APR_Compile/</url>
