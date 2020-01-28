@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="C++ STL 标准模板库, java、服务器、消息中间件、C++">
-    <meta name="description" content="简介标准模板库（英文：Standard Template Library，缩写：STL），是一个C++软件库，其中包含4个组件，分别为算法、容器、函数、迭代器。模板是C++程序设计语言中的一个重要特征，而标准模板库正是基于此特征。标准模板库">
+    <meta name="keywords" content="ActiveMQ-CPP编译——VS 2019, java、服务器、消息中间件、C++">
+    <meta name="description" content="简介CMS（代表C ++消息服务）是一种类似于JMS的API，用于C ++，用于与诸如Apache ActiveMQ之类的消息代理进行接口。 CMS有助于使您的C ++客户端代码更加整洁并易于遵循。 为了更好地了解CMS，请尝试使用API参">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>C++ STL 标准模板库 | AHSpace</title>
+    <title>ActiveMQ-CPP编译——VS 2019 | AHSpace</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/c++/cppSTL.jpeg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/c++/ActiveMQ-CPP_complie/amq-com.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        C++ STL 标准模板库
+                        ActiveMQ-CPP编译——VS 2019
                     </div>
                 </div>
             </div>
@@ -378,12 +378,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C-STL/" target="_blank">
-                                <span class="chip bg-color">C++ STL</span>
+                            <a href="/tags/ActiveMQ-CPP编译/" target="_blank">
+                                <span class="chip bg-color">ActiveMQ-CPP编译</span>
                             </a>
                         
-                            <a href="/tags/c-标准模板库/" target="_blank">
-                                <span class="chip bg-color">c++标准模板库</span>
+                            <a href="/tags/VS下编译ActiveMQ-CPP/" target="_blank">
+                                <span class="chip bg-color">VS下编译ActiveMQ-CPP</span>
                             </a>
                         
                     </div>
@@ -406,21 +406,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-19
+                    2020-01-28
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        547
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        2 分
                     </div>
                     
                 
@@ -436,34 +436,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>标准模板库（英文：Standard Template Library，缩写：STL），是一个C++软件库，其中包含4个组件，分别为算法、容器、函数、迭代器。模板是C++程序设计语言中的一个重要特征，而标准模板库正是基于此特征。标准模板库使得C++编程语言在有了同Java一样强大的类库的同时，保有了更大的可扩展性。STL的目的是标准化组件，这样就不用重新开发，可以使用现成的组件。STL是C++的一部分，因此不用安装额外的库文件。 </p>
-<p>STL 将“在数据上执行的操作”与“要执行操作的数据分开”，分别以如下概念指代：</p>
-<p><strong>容器</strong>：包含、放置数据的地方。<br><strong>迭代器</strong>：在容器中指出一个位置、或成对使用以划定一个区域，用来限定操作所涉及到的数据范围。<br><strong>算法</strong>：要执行的操作。  </p>
-<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>标准模板库包含了序列容器（sequence containers）与关系容器（associative containers）。  </p>
-<h3 id="序列容器–有序集"><a href="#序列容器–有序集" class="headerlink" title="序列容器–有序集"></a>序列容器–有序集</h3><p><strong>vector</strong>：<br>动态数组，兼容C语言数组。vector可以如同数组一样的访问方式，例如使用下标（operator[]）运算符，并记得自己的长度信息（size），您也可以使用对象的方式来访问vector（push_back、pop_back）。使用vector可以轻易地定义多维可调整型数组（std::vector&lt;std::vector&lt;…&gt; &gt;）。要使用vector，必须含入vector头文件。vector可在O(1)内完成在末尾插入/移除元素，但在vector中间或开头插入/移除元素，则需要消耗O(n)时间。  </p>
-<p><strong>list</strong>：<br>list容器是一个有序（Ordered）的数据结构（循序容器），每个元素中存储着上一个元素和下一个元素的地址（指针），因此是一个双向链接的链表。与vector相比，其元素的访问速度较慢，而在已知元素位置的情况下，插入和删除速度较快。STL容器中唯一支持事务语义。  </p>
-<p><strong>forward_list</strong>：单向链表，list的单链表版，去掉了一些操作。  </p>
-<p><strong>deque</strong>: 双端队列，可看做为能在常量时间内完成向开头或结尾插入或删除元素的vector，但是修改之后，其迭代器的有效性就无法得到保障。  </p>
-<p><strong>array</strong>：只能在初始化时指定大小的数组，可视为内置数组的封装。</p>
-<h3 id="关联容器–无序集"><a href="#关联容器–无序集" class="headerlink" title="关联容器–无序集"></a>关联容器–无序集</h3><p><strong>set</strong>：不重复元素的集合。  </p>
-<p><strong>multiset</strong>：跟set具有相同的功能，但允许重复的元素。  </p>
-<p><strong>map</strong>: 关联数组，每个元素含有两个数据项，map将一个数据项映射到另一个数据项中。  </p>
-<p><strong>multimap</strong>: 跟map具有相同功能，但允许重复的键值。</p>
-<p><strong>unordered_set</strong><br><strong>unordered_multiset</strong><br><strong>unordered_map</strong><br><strong>unordered_multimap</strong>：<br>分别类似于集合、多重集合、映射、多重映射，但使用哈希表实现。它的键（Keys）没有排序（operator&lt;），相反必须存在一个从键类型到size_t的哈希函数、且要求键之间可以判等（operator==）。自C++11起进入语言标准。</p>
-<h3 id="其他类型的容器"><a href="#其他类型的容器" class="headerlink" title="其他类型的容器"></a>其他类型的容器</h3><p><strong>bitset</strong>:存储系列位类似的固定大小的布尔向量。实现按位运算，没有迭代器，不是序列。可视为std::array&lt;bool, N&gt;。若需要改变序列长度，可用std::vector<bool>。  </bool></p>
-<p><strong>valarray</strong>:<br>数值类型的std::vector。牺牲泛型能力而专为数值计算做了优化，例如在数组上的sin操作可对数组内所有数值取正弦。有些实现会对std::valarray应用向量指令等优化手段。<br>一个观点是里面全是数值类型的valarray才是数学意义上的向量，而可以泛型的vector更该叫array——编程语言中的数组。  </p>
-<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>迭代器是泛化的指针，通过使用迭代器，开发者可以操作数据结构而无需关心其内部实现。根据迭代器的操作方式的不同，迭代器分为五种：</p>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>CMS（代表C ++消息服务）是一种类似于JMS的API，用于C ++，用于与诸如Apache ActiveMQ之类的消息代理进行接口。 CMS有助于使您的C ++客户端代码更加整洁并易于遵循。 为了更好地了解CMS，请尝试使用API参考。 ActiveMQ-CPP是仅客户端的库，客户端仍需要消息代理（例如Apache ActiveMQ）进行通信。我们的CMS实现称为ActiveMQ-CPP，它具有允许可插拔传输和有线格式的体系结构。 目前，我们支持基于TCP和SSL的OpenWire和Stomp协议，我们现在还支持故障转移传输以实现更可靠的客户端操作。 除CMS外，ActiveMQ-CPP还提供了一组强大的类，它们支持与平台无关的构造，例如线程，I / O，套接字等。您可能会发现其中许多实用程序非常有用，例如像Thread类之类的Java或Java。 “同步”宏，可让您在实现activemq :: concurrent :: Synchronizable接口的任何对象上使用类似于Java的同步。 ActiveMQ-CPP根据Apache 2.0许可发布。    </p>
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ol>
+<li>系统环境：windows 10</li>
+<li>IDE：VS 2019</li>
+<li>ActiveMQ-CPP需要依赖apr-iconv、apr-util、apr、expat、cppunit等库。</li>
+<li><a href="https://anhua2015.github.io/2020/01/23/APR_Compile/" target="_blank" rel="noopener">visual studio 2019下进行apr、apr-iconv、apr-util编译</a></li>
+<li><a href="https://anhua2015.github.io/2020/01/27/cpp-cppunit/" target="_blank" rel="noopener">CppUnit编译_VS 2019</a></li>
+</ol>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><ol>
+<li>下载：<a href="http://www.apache.org/dyn/closer.lua/activemq/activemq-cpp/3.9.5/activemq-cpp-library-3.9.5-src.zip" target="_blank" rel="noopener">activemq-cpp-library-3.9.5.src.zip</a></li>
+<li>解压。</li>
+<li>使用VS 2019打开{ActiveMQ-CPP_HOME}/vs2010-build/activemq-cpp.sln文件。</li>
+<li>使用VS的Release版本进行编译，如下图所示：</li>
+</ol>
+<p><img src="/images/c++/ActiveMQ-CPP_complie/%E5%9B%BE%E4%B8%80.png" alt="图一"></p>
+<ol start="5">
+<li><p>配置其他依赖库。</p>
 <ul>
-<li>输入迭代器</li>
-<li>输出迭代器</li>
-<li>前向迭代器</li>
-<li>双向迭代器</li>
-<li>随机访问迭代器</li>
+<li>右键activemq-cpp项目，选择属性。</li>
+<li>找到C/C++ ——&gt; 常规，选择附加包含目录，选择编辑，如下图所示：</li>
 </ul>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>STL提供了一些常见 的算法，如排序和搜索等。这些算法与数据结构的实现进行了分离。因此，用于也可对自定义的数据结构使用这些算法，只需让这些自定义的数据结构拥有算法所预期的迭代器。  </p>
-<h2 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h2><p>狭义的函数对象即重载了操作符()的类的实例，而广义来讲所有可用 x(…) 形式调用的 x 都可称为函数对象、或曰可调用对象。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://zh.wikipedia.org/wiki/%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93" target="_blank" rel="noopener">维基百科–标准模板库</a><br><a href="https://github.com/Alinshans/MyTinySTL" target="_blank" rel="noopener">github–MyTinySTL</a>  </p>
-<p><a href="https://www.twle.cn/l/yufei/cplusplus/cplusplus-basic-stl-tutorial.html" target="_blank" rel="noopener">C++ STL教程</a></p>
+<img src="/images/c++/ActiveMQ-CPP_complie/图二.png" alt="图二" style="zoom:50%;">
+
+<ul>
+<li>引入apr、apr-iconv、apr-util的include目录，如下图所示：</li>
+</ul>
+<p><img src="/images/c++/ActiveMQ-CPP_complie/%E5%9B%BE%E4%B8%89.png" alt="图三"></p>
+</li>
+<li><p>右键activemq-cpp项目，点击生成，编译成功后，如下图所示：</p>
+</li>
+</ol>
+<img src="/images/c++/ActiveMQ-CPP_complie/图四.png" alt="图四" style="zoom:40%;">
+
+<ol start="7">
+<li>我们可以在{ActiveMQ-CPP_HOME}/vs2010-build/Win32/Release目录下找到编译好的libactivemq-cpp.lib静态库。如下图所示：</li>
+</ol>
+<p><img src="/images/c++/ActiveMQ-CPP_complie/%E5%9B%BE%E4%BA%94.png" alt="图五"></p>
+<p>做了这些前期准备，在下一篇文章中将会新建一个项目来运行ActiveMQ-CPP的demo。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -640,9 +650,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《C++ STL 标准模板库》
+                    《ActiveMQ-CPP编译——VS 2019》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/01/19/cpCPP-STL/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/01/28/ActiveMQ-Cpp/" property="cc:attributionName"
                rel="cc:attributionURL">
                 anhua
             </a> 采用
@@ -682,34 +692,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/23/APR_Compile/">
+                <a href="/2020/01/28/ActiveMQ-Cpp/">
                     <div class="card-image">
                         
-                        <img src="/images/c++/binary.jpg" class="responsive-img" alt="visual studio 2019下进行apr、apr-iconv、apr-util编译">
+                        <img src="/images/c++/ActiveMQ-CPP_complie/amq-com.jpg" class="responsive-img" alt="ActiveMQ-CPP编译——VS 2019">
                         
-                        <span class="card-title">visual studio 2019下进行apr、apr-iconv、apr-util编译</span>
+                        <span class="card-title">ActiveMQ-CPP编译——VS 2019</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            环境准备开发环境Windows  
-开发工具Visual Studio 2019  
-依赖的库：  
-
-apr-1.7.0-win32-src.zip
-apr-iconv-1.2.2-win32-src.zip  
-apr-util-1.6
+                            简介CMS（代表C ++消息服务）是一种类似于JMS的API，用于C ++，用于与诸如Apache ActiveMQ之类的消息代理进行接口。 CMS有助于使您的C ++客户端代码更加整洁并易于遵循。 为了更好地了解CMS，请尝试使用API参
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -722,19 +727,16 @@ apr-util-1.6
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/apr编译/" target="_blank">
-                        <span class="chip bg-color">apr编译</span>
+                    <a href="/tags/ActiveMQ-CPP编译/" target="_blank">
+                        <span class="chip bg-color">ActiveMQ-CPP编译</span>
                     </a>
                     
-                    <a href="/tags/apr-iconv编译/" target="_blank">
-                        <span class="chip bg-color">apr-iconv编译</span>
-                    </a>
-                    
-                    <a href="/tags/apr-util编译/" target="_blank">
-                        <span class="chip bg-color">apr-util编译</span>
+                    <a href="/tags/VS下编译ActiveMQ-CPP/" target="_blank">
+                        <span class="chip bg-color">VS下编译ActiveMQ-CPP</span>
                     </a>
                     
                 </div>
@@ -748,23 +750,23 @@ apr-util-1.6
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/20/cpp-construction/">
+                <a href="/2020/01/27/cpp-cppunit/">
                     <div class="card-image">
                         
-                        <img src="/images/c++/CPP.jpg" class="responsive-img" alt="C++构造类型">
+                        <img src="/images/c++/cppunit/cppunit.jpg" class="responsive-img" alt="CppUnit编译_VS 2019">
                         
-                        <span class="card-title">C++构造类型</span>
+                        <span class="card-title">CppUnit编译_VS 2019</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++构造类型C++提供了多种基本的数据类型（int、char、double等）供用户使用，但是由于程序处理的问题往往比较复杂，而且呈现多样化，已有的基本数据类型很难满足使用要求。为了将不同类型的数据联合起来，作为一个整体进行处理，C++提
+                            简介CppUnit是用于C ++编程语言的单元测试框架模块。它允许对C源代码以及C ++ 进行单元测试，而只需最少的源代码修改。它由Michael Feathers于2000年左右启动，最初是Windows 的JUnit的C ++ 端口，并
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-27
                             </span>
                         <span class="publish-author">
                             
@@ -781,20 +783,8 @@ apr-util-1.6
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C-构造类型/" target="_blank">
-                        <span class="chip bg-color">C++构造类型</span>
-                    </a>
-                    
-                    <a href="/tags/结构体/" target="_blank">
-                        <span class="chip bg-color">结构体</span>
-                    </a>
-                    
-                    <a href="/tags/共用体/" target="_blank">
-                        <span class="chip bg-color">共用体</span>
-                    </a>
-                    
-                    <a href="/tags/枚举/" target="_blank">
-                        <span class="chip bg-color">枚举</span>
+                    <a href="/tags/CppUnit编译/" target="_blank">
+                        <span class="chip bg-color">CppUnit编译</span>
                     </a>
                     
                 </div>

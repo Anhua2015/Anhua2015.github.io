@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ActiveMQ-CPP编译——VS 2019</title>
+      <link href="/2020/01/28/ActiveMQ-Cpp/"/>
+      <url>/2020/01/28/ActiveMQ-Cpp/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>CMS（代表C ++消息服务）是一种类似于JMS的API，用于C ++，用于与诸如Apache ActiveMQ之类的消息代理进行接口。 CMS有助于使您的C ++客户端代码更加整洁并易于遵循。 为了更好地了解CMS，请尝试使用API参考。 ActiveMQ-CPP是仅客户端的库，客户端仍需要消息代理（例如Apache ActiveMQ）进行通信。我们的CMS实现称为ActiveMQ-CPP，它具有允许可插拔传输和有线格式的体系结构。 目前，我们支持基于TCP和SSL的OpenWire和Stomp协议，我们现在还支持故障转移传输以实现更可靠的客户端操作。 除CMS外，ActiveMQ-CPP还提供了一组强大的类，它们支持与平台无关的构造，例如线程，I / O，套接字等。您可能会发现其中许多实用程序非常有用，例如像Thread类之类的Java或Java。 “同步”宏，可让您在实现activemq :: concurrent :: Synchronizable接口的任何对象上使用类似于Java的同步。 ActiveMQ-CPP根据Apache 2.0许可发布。    </p><h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ol><li>系统环境：windows 10</li><li>IDE：VS 2019</li><li>ActiveMQ-CPP需要依赖apr-iconv、apr-util、apr、expat、cppunit等库。</li><li><a href="https://anhua2015.github.io/2020/01/23/APR_Compile/" target="_blank" rel="noopener">visual studio 2019下进行apr、apr-iconv、apr-util编译</a></li><li><a href="https://anhua2015.github.io/2020/01/27/cpp-cppunit/" target="_blank" rel="noopener">CppUnit编译_VS 2019</a></li></ol><h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><ol><li>下载：<a href="http://www.apache.org/dyn/closer.lua/activemq/activemq-cpp/3.9.5/activemq-cpp-library-3.9.5-src.zip" target="_blank" rel="noopener">activemq-cpp-library-3.9.5.src.zip</a></li><li>解压。</li><li>使用VS 2019打开{ActiveMQ-CPP_HOME}/vs2010-build/activemq-cpp.sln文件。</li><li>使用VS的Release版本进行编译，如下图所示：</li></ol><p><img src="/images/c++/ActiveMQ-CPP_complie/%E5%9B%BE%E4%B8%80.png" alt="图一"></p><ol start="5"><li><p>配置其他依赖库。</p><ul><li>右键activemq-cpp项目，选择属性。</li><li>找到C/C++ ——&gt; 常规，选择附加包含目录，选择编辑，如下图所示：</li></ul><img src="/images/c++/ActiveMQ-CPP_complie/图二.png" alt="图二" style="zoom:50%;"><ul><li>引入apr、apr-iconv、apr-util的include目录，如下图所示：</li></ul><p><img src="/images/c++/ActiveMQ-CPP_complie/%E5%9B%BE%E4%B8%89.png" alt="图三"></p></li><li><p>右键activemq-cpp项目，点击生成，编译成功后，如下图所示：</p></li></ol><img src="/images/c++/ActiveMQ-CPP_complie/图四.png" alt="图四" style="zoom:40%;"><ol start="7"><li>我们可以在{ActiveMQ-CPP_HOME}/vs2010-build/Win32/Release目录下找到编译好的libactivemq-cpp.lib静态库。如下图所示：</li></ol><p><img src="/images/c++/ActiveMQ-CPP_complie/%E5%9B%BE%E4%BA%94.png" alt="图五"></p><p>做了这些前期准备，在下一篇文章中将会新建一个项目来运行ActiveMQ-CPP的demo。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> c/c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ActiveMQ-CPP编译 </tag>
+            
+            <tag> VS下编译ActiveMQ-CPP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CppUnit编译_VS 2019</title>
       <link href="/2020/01/27/cpp-cppunit/"/>
       <url>/2020/01/27/cpp-cppunit/</url>
