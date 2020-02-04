@@ -413,14 +413,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.1k
+                        1.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        6 分
                     </div>
                     
                 
@@ -483,59 +483,51 @@
 </tr>
 </tbody></table>
 <p>对于autoconf、automake、libtool我们可以直接安装：</p>
-<pre class=" language-shell"><code class="language-shell">yum -y install autoconf
+<pre><code>yum -y install autoconf
 yum -y install automake
-yum -y install libtool</code></pre>
-<h3 id="CPPUnit"><a href="#CPPUnit" class="headerlink" title="CPPUnit"></a>CPPUnit</h3><p>tar解压后，进入目录，编译三部曲，configure、make、make install（install需要root权限）：</p>
-<pre class=" language-shell"><code class="language-shell">./configure --prefix=/usr/local/cppunit
+yum -y install libtool</code></pre><h3 id="CPPUnit"><a href="#CPPUnit" class="headerlink" title="CPPUnit"></a>CPPUnit</h3><p>tar解压后，进入目录，编译三部曲，configure、make、make install（install需要root权限）：</p>
+<pre><code>./configure --prefix=/usr/local/cppunit
 make
-make install</code></pre>
-<p>执行完后在/usr/local/cppunit/目录下可以看到头文件和库文件。</p>
+make install</code></pre><p>执行完后在/usr/local/cppunit/目录下可以看到头文件和库文件。</p>
 <h3 id="APR"><a href="#APR" class="headerlink" title="APR"></a>APR</h3><p>同上，解压进入目录，三部曲：</p>
-<pre class=" language-shell"><code class="language-shell">./configure --prefix=/usr/local/apr
+<pre><code>./configure --prefix=/usr/local/apr
 make
-make install</code></pre>
-<h2 id="apr-iconv"><a href="#apr-iconv" class="headerlink" title="apr-iconv"></a>apr-iconv</h2><p>解压编译：</p>
-<pre class=" language-shell"><code class="language-shell">./configure --prefix=/usr/local/apriconv --with-apr=/usr/local/apr
+make install</code></pre><h2 id="apr-iconv"><a href="#apr-iconv" class="headerlink" title="apr-iconv"></a>apr-iconv</h2><p>解压编译：</p>
+<pre><code>./configure --prefix=/usr/local/apriconv --with-apr=/usr/local/apr
 make
-make install</code></pre>
-<h3 id="apr-util"><a href="#apr-util" class="headerlink" title="apr-util"></a>apr-util</h3><p>解压编译：</p>
-<pre class=" language-shell"><code class="language-shell">./configure --prefix=/usr/local/aprutil --with-apr=/usr/local/apr
+make install</code></pre><h3 id="apr-util"><a href="#apr-util" class="headerlink" title="apr-util"></a>apr-util</h3><p>解压编译：</p>
+<pre><code>./configure --prefix=/usr/local/aprutil --with-apr=/usr/local/apr
 make
-make install</code></pre>
-<h3 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h3><p>解压编译：</p>
-<pre class=" language-shell"><code class="language-shell">./config --prefix=/usr/local/openssl
+make install</code></pre><h3 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h3><p>解压编译：</p>
+<pre><code>./config --prefix=/usr/local/openssl
 make
-make install</code></pre>
-<p><code>/makemake install</code></p>
-<h3 id="ActiveMQ-CPP"><a href="#ActiveMQ-CPP" class="headerlink" title="ActiveMQ-CPP"></a>ActiveMQ-CPP</h3><p>解压编译：</p>
-<pre class=" language-shell"><code class="language-shell">./configure --prefix=/usr/local/activemq-cpp --with-apr=/usr/local/apr --with-apr-iconv=/usr/local/apriconv --with-apr-util=/usr/local/aprutil --with-cppunit=/usr/local/cppunit --with-openssl=/usr/local/openssl
+make install</code></pre><h3 id="ActiveMQ-CPP"><a href="#ActiveMQ-CPP" class="headerlink" title="ActiveMQ-CPP"></a>ActiveMQ-CPP</h3><p>解压编译：</p>
+<pre><code>./configure --prefix=/usr/local/activemq-cpp --with-apr=/usr/local/apr --with-apr-iconv=/usr/local/apriconv --with-apr-util=/usr/local/aprutil --with-cppunit=/usr/local/cppunit --with-openssl=/usr/local/openssl
 make
-make install</code></pre>
-<p>若在make时报错，提示找不到ssl库<br>/usr/bin/ld: cannot find -lssl<br>进入到 /usr/local/openssl目录，将lib64目录复制一份，复制的新目录名为lib，命令：cp -r lib64 lib，这是由于make时使用的 /usr/local/openssl/lib路径导致。</p>
+make install</code></pre><p>若在make时报错，提示找不到ssl库<br>/usr/bin/ld: cannot find -lssl<br>进入到 /usr/local/openssl目录，将lib64目录复制一份，复制的新目录名为lib，命令：cp -r lib64 lib，这是由于make时使用的 /usr/local/openssl/lib路径导致。</p>
 <h2 id="二、测试程序"><a href="#二、测试程序" class="headerlink" title="二、测试程序"></a>二、测试程序</h2><p>到这里ActiveMQ-CPP的基本环境就搭建完成了，在/usr/local目录下生成了6个目录，分别为activemq-cpp、apr、apr-iconv、aprutil、cppunit、openssl。</p>
 <p>下面编写一段测试代码（test.cpp），用于检测cms开发库是否可用。</p>
-<pre class=" language-c++"><code class="language-c++">#include <activemq library="" activemqcpp.h="">
-#include <decaf lang="" thread.h="">
-#include <decaf lang="" runnable.h="">
-#include <decaf util="" concurrent="" countdownlatch.h="">
-#include <decaf lang="" integer.h="">
-#include <decaf lang="" long.h="">
-#include <decaf lang="" system.h="">
-#include <activemq core="" activemqconnectionfactory.h="">
-#include <activemq util="" config.h="">
-#include <cms connection.h="">
-#include <cms session.h="">
-#include <cms textmessage.h="">
-#include <cms bytesmessage.h="">
-#include <cms mapmessage.h="">
-#include <cms exceptionlistener.h="">
-#include <cms messagelistener.h="">
+<pre><code>#include &lt;activemq/library/ActiveMQCPP.h&gt;
+#include &lt;decaf/lang/Thread.h&gt;
+#include &lt;decaf/lang/Runnable.h&gt;
+#include &lt;decaf/util/concurrent/CountDownLatch.h&gt;
+#include &lt;decaf/lang/Integer.h&gt;
+#include &lt;decaf/lang/Long.h&gt;
+#include &lt;decaf/lang/System.h&gt;
+#include &lt;activemq/core/ActiveMQConnectionFactory.h&gt;
+#include &lt;activemq/util/Config.h&gt;
+#include &lt;cms/Connection.h&gt;
+#include &lt;cms/Session.h&gt;
+#include &lt;cms/TextMessage.h&gt;
+#include &lt;cms/BytesMessage.h&gt;
+#include &lt;cms/MapMessage.h&gt;
+#include &lt;cms/ExceptionListener.h&gt;
+#include &lt;cms/MessageListener.h&gt;
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-#include <memory>
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+#include &lt;memory&gt;
 
 using namespace activemq::core;
 using namespace decaf::util::concurrent;
@@ -555,7 +547,7 @@ int main()
         std::string brokerurl("failover:(tcp://127.0.0.1:61616)");
         try
         {
-                auto_ptr<connectionfactory> connFactory(ConnectionFactory::createCMSConnectionFactory(brokerurl));
+                auto_ptr&lt;ConnectionFactory&gt; connFactory(ConnectionFactory::createCMSConnectionFactory(brokerurl));
                 conn = connFactory-&gt;createConnection();
                 conn-&gt;start();
 
@@ -603,18 +595,15 @@ int main()
 
         cout &lt;&lt; "test end" &lt;&lt; endl;
         activemq::library::ActiveMQCPP::shutdownLibrary();
-}</connectionfactory></memory></iostream></stdio.h></stdlib.h></cms></cms></cms></cms></cms></cms></cms></activemq></activemq></decaf></decaf></decaf></decaf></decaf></decaf></activemq></code></pre>
-<p>编译命令：运行时，需要将/usr/local/activemq-cpp/lib下的libactivemq-cpp.so、libactivemq-cpp.so.19、libactivemq-cpp.so.19.0.5这3个，以及/usr/local/openssl/lib下的libssl.so.1.1以及libcrypto.so.1.1复制到/usr/lib64目录下。</p>
-<pre class=" language-shell"><code class="language-shell">g++ test.cpp -I /usr/local/activemq-cpp/include/activemq-cpp-3.9.5 -I /usr/local/apr/include/apr-1 -L /usr/local/openssl/lib -l ssl -l crypto -L /usr/local/activemq-cpp/lib -l activemq-cpp</code></pre>
-<p> gcc/g++的编译参数，这里只介绍 -L 、-l、-include、-I。</p>
-<pre class=" language-shell"><code class="language-shell">  -L ：表示要链接的库所在的目录。-L.  表示要链接的库在当前目录， -L/usr/lib 表示要连接的库在/usr/lib下。目录在/usr/lib时，系统会自动搜索这个目录，可以不用指明。
+}</code></pre><p>编译命令：运行时，需要将/usr/local/activemq-cpp/lib下的libactivemq-cpp.so、libactivemq-cpp.so.19、libactivemq-cpp.so.19.0.5这3个，以及/usr/local/openssl/lib下的libssl.so.1.1以及libcrypto.so.1.1复制到/usr/lib64目录下。</p>
+<pre><code>g++ test.cpp -I /usr/local/activemq-cpp/include/activemq-cpp-3.9.5 -I /usr/local/apr/include/apr-1 -L /usr/local/openssl/lib -l ssl -l crypto -L /usr/local/activemq-cpp/lib -l activemq-cpp</code></pre><p> gcc/g++的编译参数，这里只介绍 -L 、-l、-include、-I。</p>
+<pre><code>  -L ：表示要链接的库所在的目录。-L.  表示要链接的库在当前目录， -L/usr/lib 表示要连接的库在/usr/lib下。目录在/usr/lib时，系统会自动搜索这个目录，可以不用指明。
 
  -l (L的小写)：表示需要链接库的名称，注意不是库文件名称，比如库文件为 libtest.so，那么库名称为test
 
  -include ：包含头文件，这个很少用，因为一般情况下在源码中，都有指定头文件。
 
-  -I (i 的大写)：指定头文件的所在的目录，可以使用相对路径。</code></pre>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/dream_1996/article/details/69397089" target="_blank" rel="noopener">CentOs下安装gcc/g++/gdb</a></p>
+  -I (i 的大写)：指定头文件的所在的目录，可以使用相对路径。</code></pre><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/dream_1996/article/details/69397089" target="_blank" rel="noopener">CentOs下安装gcc/g++/gdb</a></p>
 <p><a href="https://blog.csdn.net/lgh1700/article/details/51055784" target="_blank" rel="noopener">Linux下安装ActiveMQ CPP</a></p>
 <p><a href="https://blog.csdn.net/github_30605157/article/details/60468727" target="_blank" rel="noopener">Linux下安装ActiveMQ CPP Library 3.9.4</a></p>
 <p><a href="https://www.twblogs.net/a/5b838b832b71776c51e38884/zh-cn" target="_blank" rel="noopener">Linux 下的 ActiveMQ C++ 客户端开发</a></p>
@@ -1095,7 +1084,7 @@ visual studio 201
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.8k</span>&nbsp;字
+                class="white-color">15.9k</span>&nbsp;字
             
             
             
