@@ -4,8 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo:Hello World, java、服务器、消息中间件、C++">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="jQuery-selector, java、服务器、消息中间件、C++">
+    <meta name="description" content="1. 基本选择器
+#id：根据给定的ID匹配一个元素。
+element：根据给定的元素标签名匹配所有元素。
+.class：根据给定的css类名匹配元素。
+*：匹配所有元素。
+selector1,selector2,…,selectorN：将">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo:Hello World | AHSpace</title>
+    <title>jQuery-selector | AHSpace</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +266,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/hexo/hexo-cover.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/jQuery/jQuery.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo:Hello World
+                        jQuery-selector
                     </div>
                 </div>
             </div>
@@ -378,8 +383,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/" target="_blank">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/jQuery基础/" target="_blank">
+                                <span class="chip bg-color">jQuery基础</span>
+                            </a>
+                        
+                            <a href="/tags/selector/" target="_blank">
+                                <span class="chip bg-color">selector</span>
+                            </a>
+                        
+                            <a href="/tags/jQuery选择器/" target="_blank">
+                                <span class="chip bg-color">jQuery选择器</span>
                             </a>
                         
                     </div>
@@ -390,8 +403,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category" target="_blank">
-                                hexo
+                            <a href="/categories/jQuery/" class="post-category" target="_blank">
+                                jQuery
                             </a>
                         
                     </div>
@@ -402,21 +415,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-01
+                    2020-06-09
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        125
+                        1.5k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        5 分
                     </div>
                     
                 
@@ -432,15 +445,103 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h2 id="1-基本选择器"><a href="#1-基本选择器" class="headerlink" title="1. 基本选择器"></a>1. 基本选择器</h2><ul>
+<li>#id：根据给定的ID匹配一个元素。</li>
+<li>element：根据给定的元素标签名匹配所有元素。</li>
+<li>.class：根据给定的css类名匹配元素。</li>
+<li>*：匹配所有元素。</li>
+<li>selector1,selector2,…,selectorN：将每一个选择器匹配到的元素合并后一起返回。</li>
+</ul>
+<h2 id="2-层级选择器"><a href="#2-层级选择器" class="headerlink" title="2. 层级选择器"></a>2. 层级选择器</h2><ul>
+<li>ancestor descendant：在给定的祖先元素下匹配所有的后代元素。</li>
+<li>parent &gt; child：在给定的父元素下匹配所有的子元素。</li>
+<li>prev + next：匹配所有紧接在 prev 元素后的 next 元素。</li>
+<li>prev ~ siblings：匹配 prev 元素之后的所有 siblings 元素</li>
+</ul>
+<h2 id="3-基本筛选器"><a href="#3-基本筛选器" class="headerlink" title="3. 基本筛选器"></a>3. 基本筛选器</h2><ul>
+<li>:first 获取第一个元素</li>
+<li>:not(selector)  去除所有与给定选择器匹配的元素</li>
+<li>:even  匹配所有索引值为偶数的元素，从 0 开始计数</li>
+<li>:odd 匹配所有索引值为奇数的元素，从 0 开始计数</li>
+<li>:eq(index) 匹配一个给定索引值的元素</li>
+<li>:gt(index)  匹配所有大于给定索引值的元素，索引值从0开始</li>
+<li>:lang(language) 选择指定语言的所有元素</li>
+<li>:last 获取最后个元素</li>
+<li>:lt(index) 匹配所有小于给定索引值的元素</li>
+<li>:header  匹配如 h1, h2, h3之类的标题元素</li>
+<li>:animated  匹配所有正在执行动画效果的元素</li>
+<li>:focus  匹配当前获取焦点的元素。</li>
+<li>:root 选择该文档的根元素。在HTML中，文档的根元素，和$(“:root”)选择的元素一样， 永远是元素。</li>
+<li>:target 选择由文档URI的格式化识别码表示的目标元素。 例如，给定的URI <code>https://example.com/#foo</code>， <code>$( "p:target" )</code>，将选择<code>&lt;p id="foo"&gt;</code>元素。</li>
+</ul>
+<h2 id="4-内容选择器"><a href="#4-内容选择器" class="headerlink" title="4. 内容选择器"></a>4. 内容选择器</h2><ul>
+<li>:contains(text)  匹配包含给定文本的元素</li>
+<li>:empty 匹配所有不包含子元素或者文本的空元素</li>
+<li>:has(selector) 匹配含有选择器所匹配的元素的元素</li>
+<li>:parent 匹配含有子元素或者文本的元素</li>
+</ul>
+<h2 id="5-可见性"><a href="#5-可见性" class="headerlink" title="5. 可见性"></a>5. 可见性</h2><ul>
+<li>:hidden 匹配所有不可见元素，或者type为hidden的元素</li>
+<li>:visible 匹配所有的可见元素</li>
+</ul>
+<h2 id="6-属性选择器"><a href="#6-属性选择器" class="headerlink" title="6. 属性选择器"></a>6. 属性选择器</h2><ul>
+<li>[attribute] 匹配包含给定属性的元素。</li>
+<li>[attribute=value] 匹配给定的属性是某个特定值的元素</li>
+<li>[attribute!=value] 匹配所有不含有指定的属性，或者属性不等于特定值的元素。</li>
+<li>[attribute^=value] 匹配给定的属性是以某些值开始的元素</li>
+<li>[attribute$=value] 匹配给定的属性是以某些值结尾的元素</li>
+<li>[attribute*=value] 匹配给定的属性是以包含某些值的元素</li>
+<li>[attrSel1] [attrSel2] [attrSelN] 复合属性选择器，需要同时满足多个条件时使用。</li>
+</ul>
+<h2 id="7-子元素选择器"><a href="#7-子元素选择器" class="headerlink" title="7. 子元素选择器"></a>7. 子元素选择器</h2><ul>
+<li><p>:first-child  匹配所给选择器( :之前的选择器)的第一个子元素。<code>在每个 ul 中查找第一个 li，$("ul li:first-child")</code></p>
+</li>
+<li><p>:first-of-type  匹配E的父元素的第一个E类型的孩子。</p>
+</li>
+<li><p>:last-child  匹配最后一个子元素。<code>$("ul li:last-child")，在每个 ul 中查找最后一个 li</code></p>
+</li>
+<li><p>:last-of-type 匹配E的父元素的最后一个E类型的孩子</p>
+</li>
+<li><p>:nth-child 匹配其父元素下的第N个子或奇偶元素</p>
+<p>:nth-child从1开始的，而:eq()是从0算起的！可以使用:<br>nth-child(even)<br>:nth-child(odd)<br>:nth-child(3n)<br>:nth-child(2)<br>:nth-child(3n+1)<br>:nth-child(3n+2)</p>
+</li>
+<li><p>:nth-last-child(n|even|odd|formula) 选择所有他们父元素的第n个子元素。计数从最后一个元素开始到第一个。<strong>formula：</strong>使用特殊公式如(<em>an</em> + <em>b</em>)进行选择. 例如:nth-last-child(3n+2) 从倒数第二个子元素开始，匹配每个3的倍数的元素。<code>在每个匹配的ul中查找倒数第二个li，$("ul li:nth-last-child(2)");</code></p>
+</li>
+<li><p>:nth-last-of-type(n|even|odd|formula) 给定一个单一&lt;ul&gt;包含3个&lt;li&gt;，$(‘li:nth-last-of-type(1)’)选择第3个，也就是最后一个&lt;li&gt;。</p>
+</li>
+<li><p>:nth-of-type(n|even|odd|formula) 选择同属于一个父元素之下，并且标签名相同的子元素中的第n个。</p>
+</li>
+<li><p>:only-child 如果某个元素是父元素中唯一的子元素，那将会被匹配。如果父元素中含有其他元素，那将不会被匹配。</p>
+</li>
+<li><p>:only-of-type 如果父元素有相同的元素名称的其他子元素，那么没有元素会被匹配。</p>
+</li>
+</ul>
+<h2 id="8-表单选择器"><a href="#8-表单选择器" class="headerlink" title="8. 表单选择器"></a>8. 表单选择器</h2><ul>
+<li>:input  匹配所有 input, textarea, select 和 button 元素</li>
+<li>:text 匹配所有的单行文本框</li>
+<li>:password 匹配所有的密码框</li>
+<li>:radio 匹配所有单选按钮</li>
+<li>:checkbox 匹配所有复选框</li>
+<li>:submit 匹配所有提交按钮，理论上只匹配 type=”submit” 的input或者button，但是现在的很多浏览器，button元素默认的type即为submit，所以很多情况下，不设置type的button也会成为筛选结果。为了防止歧义或者误操作，建议所有的button在使用时都添加type属性。</li>
+<li>:image 匹配所有图像域</li>
+<li>:reset 匹配所有重置按钮</li>
+<li>:button 匹配所有按钮</li>
+<li>:file 匹配所有文件域</li>
+</ul>
+<h2 id="9-表单对象属性"><a href="#9-表单对象属性" class="headerlink" title="9. 表单对象属性"></a>9. 表单对象属性</h2><ul>
+<li><p>:enabled 匹配所有可用元素</p>
+</li>
+<li><p>:disabled 匹配所有不可用元素</p>
+</li>
+<li><p>:checked 匹配所有选中的被选中元素(复选框、单选框等，select中的option)，对于select元素来说，获取选中推荐使用 :selected</p>
+</li>
+<li><p>:selected 匹配所有选中的option元素</p>
+</li>
+</ul>
+<h2 id="10-混淆选择器"><a href="#10-混淆选择器" class="headerlink" title="10. 混淆选择器"></a>10. 混淆选择器</h2><ul>
+<li>$.escapeSelector(selector)  这个方法通常被用在类选择器或者ID选择器中包含一些CSS特殊字符的时候，这个方法基本上与CSS中CSS.escape()方法类似，唯一的区别是jquery中的这个方法支持所有浏览器。<code>$.escapeSelector( "#target" ); // "\#target"</code></li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://jquery.cuishifeng.cn/" target="_blank" rel="noopener">jQuery API 中文文档</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -617,9 +718,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hexo:Hello World》
+                    《jQuery-selector》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/01/hello-world/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/06/09/jQuery-selector/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Anhua2015
             </a> 采用
@@ -659,86 +760,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/27/mavenSettings/">
+                <a href="/2020/06/09/jQuery-selector/">
                     <div class="card-image">
                         
-                        <img src="/images/maven/maven.jpg" class="responsive-img" alt="maven基本配置---本地仓库+阿里云远程库">
+                        <img src="/images/jQuery/jQuery.jpg" class="responsive-img" alt="jQuery-selector">
                         
-                        <span class="card-title">maven基本配置---本地仓库+阿里云远程库</span>
+                        <span class="card-title">jQuery-selector</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            maven本地仓库配置+修改远程仓库
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/maven/" class="post-category" target="_blank">
-                                    maven
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/maven本地仓库配置/" target="_blank">
-                        <span class="chip bg-color">maven本地仓库配置</span>
-                    </a>
-                    
-                    <a href="/tags/maven添加阿里云远程仓库/" target="_blank">
-                        <span class="chip bg-color">maven添加阿里云远程仓库</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/01/hello-world/">
-                    <div class="card-image">
-                        
-                        <img src="/images/hexo/hexo-cover.png" class="responsive-img" alt="Hexo:Hello World">
-                        
-                        <span class="card-title">Hexo:Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            jQuery入口函数详解
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-01
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category" target="_blank">
-                                    hexo
+                            <a href="/categories/jQuery/" class="post-category" target="_blank">
+                                    jQuery
                                 </a>
                             
                             
@@ -749,8 +799,72 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/" target="_blank">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/jQuery基础/" target="_blank">
+                        <span class="chip bg-color">jQuery基础</span>
+                    </a>
+                    
+                    <a href="/tags/selector/" target="_blank">
+                        <span class="chip bg-color">selector</span>
+                    </a>
+                    
+                    <a href="/tags/jQuery选择器/" target="_blank">
+                        <span class="chip bg-color">jQuery选择器</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06/09/jQuery-ready/">
+                    <div class="card-image">
+                        
+                        <img src="/images/jQuery/jQuery.jpg" class="responsive-img" alt="jQuery入口函数">
+                        
+                        <span class="card-title">jQuery入口函数</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jQuery入口函数详解
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/jQuery/" class="post-category" target="_blank">
+                                    jQuery
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jQuery基础/" target="_blank">
+                        <span class="chip bg-color">jQuery基础</span>
+                    </a>
+                    
+                    <a href="/tags/ready/" target="_blank">
+                        <span class="chip bg-color">ready</span>
+                    </a>
+                    
+                    <a href="/tags/jQuery入口函数/" target="_blank">
+                        <span class="chip bg-color">jQuery入口函数</span>
                     </a>
                     
                 </div>
