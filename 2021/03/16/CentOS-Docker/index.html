@@ -413,7 +413,7 @@ $sudo yum ">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        166
+                        197
                     </div>
                     
 
@@ -449,6 +449,10 @@ $sudo yum remove docker \
                   docker-logrotate \
                   docker-engine
 #安装 Docker Engine-Community
+##安装所需要的的软件包
+$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
 ##设置仓库
 $ sudo yum-config-manager \
     --add-repo \
@@ -458,6 +462,7 @@ $ sudo yum-config-manager \
 $ sudo yum install docker-ce docker-ce-cli containerd.io 
 #启动Docker
 $ sudo systemctl start docker</code></pre>
+<p><a href="https://www.runoob.com/docker/centos-docker-install.html" target="_blank" rel="noopener">CentOS Docker 安装 | 菜鸟教程 (runoob.com)</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
