@@ -422,14 +422,14 @@ selector1,selector2,…,selectorN：将">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.5k
+                        1.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        6 分
                     </div>
                     
                 
@@ -456,6 +456,17 @@ selector1,selector2,…,selectorN：将">
 <li>ancestor descendant：在给定的祖先元素下匹配所有的后代元素。</li>
 <li>parent &gt; child：在给定的父元素下匹配所有的子元素。</li>
 <li>prev + next：匹配所有紧接在 prev 元素后的 next 元素。</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myP<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myP<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- $('.myP + div') --></span>
+<span class="token comment" spellcheck="true">&lt;!-- $('.myP ~ div') --></span>
+<span class="token comment" spellcheck="true">&lt;!-- $('.myP:first') --></span></code></pre>
+<ul>
 <li>prev ~ siblings：匹配 prev 元素之后的所有 siblings 元素</li>
 </ul>
 <h2 id="3-基本筛选器"><a href="#3-基本筛选器" class="headerlink" title="3. 基本筛选器"></a>3. 基本筛选器</h2><ul>
@@ -476,6 +487,14 @@ selector1,selector2,…,selectorN：将">
 </ul>
 <h2 id="4-内容选择器"><a href="#4-内容选择器" class="headerlink" title="4. 内容选择器"></a>4. 内容选择器</h2><ul>
 <li>:contains(text)  匹配包含给定文本的元素</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>p<span class="token operator">></span> ksdjfl jack skdjfkl<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>p<span class="token operator">></span> ksdjfl jack skdjfkl<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'p:contains("jack")'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div:empty:not(".test")'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
 <li>:empty 匹配所有不包含子元素或者文本的空元素</li>
 <li>:has(selector) 匹配含有选择器所匹配的元素的元素</li>
 <li>:parent 匹配含有子元素或者文本的元素</li>
@@ -487,6 +506,23 @@ selector1,selector2,…,selectorN：将">
 <h2 id="6-属性选择器"><a href="#6-属性选择器" class="headerlink" title="6. 属性选择器"></a>6. 属性选择器</h2><ul>
 <li>[attribute] 匹配包含给定属性的元素。</li>
 <li>[attribute=value] 匹配给定的属性是某个特定值的元素</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    sdjkfl
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    sdjkfl
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    sdf
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'p[id*="es"][class][name][..]'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<ul>
 <li>[attribute!=value] 匹配所有不含有指定的属性，或者属性不等于特定值的元素。</li>
 <li>[attribute^=value] 匹配给定的属性是以某些值开始的元素</li>
 <li>[attribute$=value] 匹配给定的属性是以某些值结尾的元素</li>
@@ -494,8 +530,20 @@ selector1,selector2,…,selectorN：将">
 <li>[attrSel1] [attrSel2] [attrSelN] 复合属性选择器，需要同时满足多个条件时使用。</li>
 </ul>
 <h2 id="7-子元素选择器"><a href="#7-子元素选择器" class="headerlink" title="7. 子元素选择器"></a>7. 子元素选择器</h2><ul>
-<li><p>:first-child  匹配所给选择器( :之前的选择器)的第一个子元素。<code>在每个 ul 中查找第一个 li，$("ul li:first-child")</code></p>
-</li>
+<li>:first-child  匹配所给选择器( :之前的选择器)的第一个子元素。<code>在每个 ul 中查找第一个 li，$("ul li:first-child")</code></li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>sdf<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'p:last-of-type'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+<ul>
 <li><p>:first-of-type  匹配E的父元素的第一个E类型的孩子。</p>
 </li>
 <li><p>:last-child  匹配最后一个子元素。<code>$("ul li:last-child")，在每个 ul 中查找最后一个 li</code></p>
@@ -516,6 +564,15 @@ selector1,selector2,…,selectorN：将">
 <li><p>:only-of-type 如果父元素有相同的元素名称的其他子元素，那么没有元素会被匹配。</p>
 </li>
 </ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"span:only-of-type"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
 <h2 id="8-表单选择器"><a href="#8-表单选择器" class="headerlink" title="8. 表单选择器"></a>8. 表单选择器</h2><ul>
 <li>:input  匹配所有 input, textarea, select 和 button 元素</li>
 <li>:text 匹配所有的单行文本框</li>
@@ -760,55 +817,49 @@ selector1,selector2,…,selectorN：将">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/09/jQuery-selector/">
+                <a href="/2021/03/16/CentOS-Docker/">
                     <div class="card-image">
                         
-                        <img src="/images/jQuery/jQuery.jpg" class="responsive-img" alt="jQuery-selector">
+                        <img src="/images/centos/CentOS-Docker.png" class="responsive-img" alt="CentOS安装Docker">
                         
-                        <span class="card-title">jQuery-selector</span>
+                        <span class="card-title">CentOS安装Docker</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            jQuery入口函数详解
+                            CentOS安装Docker1. 使用官方脚本自动安装
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+2. 手动安装
+#卸载旧版本
+$sudo yum 
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-03-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/jQuery/" class="post-category" target="_blank">
-                                    jQuery
+                            <a href="/categories/CentOS/" class="post-category" target="_blank">
+                                    CentOS
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jQuery基础/" target="_blank">
-                        <span class="chip bg-color">jQuery基础</span>
-                    </a>
-                    
-                    <a href="/tags/selector/" target="_blank">
-                        <span class="chip bg-color">selector</span>
-                    </a>
-                    
-                    <a href="/tags/jQuery选择器/" target="_blank">
-                        <span class="chip bg-color">jQuery选择器</span>
+                    <a href="/tags/安装Docker/" target="_blank">
+                        <span class="chip bg-color">安装Docker</span>
                     </a>
                     
                 </div>
@@ -1022,7 +1073,7 @@ selector1,selector2,…,selectorN：将">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.8k</span>&nbsp;字
+                class="white-color">23.1k</span>&nbsp;字
             
             
             
